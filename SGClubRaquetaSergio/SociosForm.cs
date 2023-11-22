@@ -68,11 +68,9 @@ namespace SGClubRaquetaSergio
                         MessageBox.Show($"Property: {validationError.PropertyName} Error: {validationError.ErrorMessage}");
                     }
                 }
-
-                // Otros manejadores o acciones que puedas necesitar.
             }
-
         }
+
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
@@ -142,7 +140,6 @@ namespace SGClubRaquetaSergio
                     }
                     else
                     {
-
                         MessageBox.Show("Socio tiene reservas en curso y no se puede eliminar ", "Eliminar socio", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
@@ -158,7 +155,7 @@ namespace SGClubRaquetaSergio
                 var datosSocios = from socios in objDB.socios
                                   select socios;
 
-                dataGSocios.DataSource = datosSocios.ToList();
+                dataGSocios.DataSource = datosSocios.OrderBy(s => s.nombre).ToList();
                 dataGSocios.Columns[7].Visible = false;
             }
         }
