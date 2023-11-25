@@ -8,7 +8,7 @@
   <Shapes>
     <Shape ID="DesignTable:pistas" ZOrder="5" X="1015" Y="37" Height="191" Width="230" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
     <Shape ID="DesignTable:reservas" ZOrder="1" X="631" Y="23" Height="248" Width="260" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
-    <Shape ID="DesignTable:socios" ZOrder="4" X="297" Y="30" Height="210" Width="180" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
+    <Shape ID="DesignTable:socios" ZOrder="4" X="297" Y="30" Height="248" Width="230" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:reservas_fk_pst" ZOrder="3" LineWidth="11">
@@ -26,7 +26,7 @@
     <Connector ID="DesignRelation:reservas_fk_soc" ZOrder="2" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>477</X>
+          <X>527</X>
           <Y>121</Y>
         </Point>
         <Point>

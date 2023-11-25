@@ -60,6 +60,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>clubraquetaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ComboItemRevervas.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
