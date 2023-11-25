@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SGClubRaquetaSergio.clubraquetaDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -49,6 +50,46 @@ namespace SGClubRaquetaSergio
                 this.pistasBindingSource.EndEdit();
                 this.tableAdapterManager.UpdateAll(this.clubraquetaDataSet);
             }
+        }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("¿Estás seguro?", "Eliminar el alumno", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+            if (rs == DialogResult.Yes)
+            {
+
+                reservasTableAdapter reservasAdapter = new reservasTableAdapter();
+                pistasTableAdapter pistasAdapter = new pistasTableAdapter();
+
+
+                // Check if the alumno has a related curso
+                bool pistaTieneReserva = false;
+
+                int idPista = int.Parse(pistasBindingNavigator.PositionItem.Text);
+
+
+                if (reservasAdapter.CountByIdPista(idPista) > 0)
+                {
+                    pistaTieneReserva = true;
+                };
+
+                if (pistaTieneReserva)
+                {
+                    MessageBox.Show("La pista elegida tiene reservas en curso, No se puede borrar");
+                }
+                else
+                {
+                    pistasAdapter.DeleteByIdPista(idPista);
+                    MessageBox.Show("Pista borrada");
+                    cargarDatos();
+                }
+            }
+        }
+
+        private void cargarDatos()
+        {
+            this.pistasTableAdapter.Fill(this.clubraquetaDataSet.pistas);
         }
     }
 }

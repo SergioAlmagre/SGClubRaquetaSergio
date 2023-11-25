@@ -34,10 +34,6 @@
             System.Windows.Forms.Label nombreLabel;
             System.Windows.Forms.Label ubicacionLabel;
             System.Windows.Forms.Label precioHoraLabel;
-            this.clubraquetaDataSet = new SGClubRaquetaSergio.clubraquetaDataSet();
-            this.pistasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pistasTableAdapter = new SGClubRaquetaSergio.clubraquetaDataSetTableAdapters.pistasTableAdapter();
-            this.tableAdapterManager = new SGClubRaquetaSergio.clubraquetaDataSetTableAdapters.TableAdapterManager();
             this.pistasBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -58,45 +54,27 @@
             this.fotoPictureBox = new System.Windows.Forms.PictureBox();
             this.btnNuevaFoto = new System.Windows.Forms.Button();
             this.ofdCaratula = new System.Windows.Forms.OpenFileDialog();
+            this.pistasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clubraquetaDataSet = new SGClubRaquetaSergio.clubraquetaDataSet();
+            this.pistasTableAdapter = new SGClubRaquetaSergio.clubraquetaDataSetTableAdapters.pistasTableAdapter();
+            this.tableAdapterManager = new SGClubRaquetaSergio.clubraquetaDataSetTableAdapters.TableAdapterManager();
             idPistaLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             ubicacionLabel = new System.Windows.Forms.Label();
             precioHoraLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.clubraquetaDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pistasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pistasBindingNavigator)).BeginInit();
             this.pistasBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pistasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clubraquetaDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // clubraquetaDataSet
-            // 
-            this.clubraquetaDataSet.DataSetName = "clubraquetaDataSet";
-            this.clubraquetaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pistasBindingSource
-            // 
-            this.pistasBindingSource.DataMember = "pistas";
-            this.pistasBindingSource.DataSource = this.clubraquetaDataSet;
-            // 
-            // pistasTableAdapter
-            // 
-            this.pistasTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.pistasTableAdapter = this.pistasTableAdapter;
-            this.tableAdapterManager.reservasTableAdapter = null;
-            this.tableAdapterManager.sociosTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = SGClubRaquetaSergio.clubraquetaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // pistasBindingNavigator
             // 
             this.pistasBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
             this.pistasBindingNavigator.BindingSource = this.pistasBindingSource;
             this.pistasBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.pistasBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.pistasBindingNavigator.DeleteItem = null;
             this.pistasBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -206,6 +184,7 @@
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "Eliminar";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
             // pistasBindingNavigatorSaveItem
             // 
@@ -310,6 +289,28 @@
             // 
             this.ofdCaratula.FileName = "openFileDialog1";
             // 
+            // pistasBindingSource
+            // 
+            this.pistasBindingSource.DataMember = "pistas";
+            this.pistasBindingSource.DataSource = this.clubraquetaDataSet;
+            // 
+            // clubraquetaDataSet
+            // 
+            this.clubraquetaDataSet.DataSetName = "clubraquetaDataSet";
+            this.clubraquetaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pistasTableAdapter
+            // 
+            this.pistasTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.pistasTableAdapter = this.pistasTableAdapter;
+            this.tableAdapterManager.reservasTableAdapter = null;
+            this.tableAdapterManager.sociosTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = SGClubRaquetaSergio.clubraquetaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // PistasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -331,12 +332,12 @@
             this.Name = "PistasForm";
             this.Text = "PistasForm2";
             this.Load += new System.EventHandler(this.PistasForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.clubraquetaDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pistasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pistasBindingNavigator)).EndInit();
             this.pistasBindingNavigator.ResumeLayout(false);
             this.pistasBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pistasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clubraquetaDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
