@@ -47,8 +47,25 @@
             this.lblRespuestaDniSocio = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.dateTimePickerReservas = new System.Windows.Forms.DateTimePicker();
+            this.cboPistaReservas = new System.Windows.Forms.ComboBox();
+            this.numUpDoHoras = new System.Windows.Forms.NumericUpDown();
+            this.numUpDoMinutos = new System.Windows.Forms.NumericUpDown();
+            this.pictureBoxReservas = new System.Windows.Forms.PictureBox();
+            this.btnReservar = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.clubraquetaDataSet = new SGClubRaquetaSergio.clubraquetaDataSet();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDoHoras)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDoMinutos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxReservas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clubraquetaDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -205,14 +222,145 @@
             this.panel1.Controls.Add(this.label8);
             this.panel1.Location = new System.Drawing.Point(21, 72);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(656, 134);
+            this.panel1.Size = new System.Drawing.Size(656, 131);
             this.panel1.TabIndex = 17;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.btnReservar);
+            this.panel2.Controls.Add(this.pictureBoxReservas);
+            this.panel2.Controls.Add(this.numUpDoMinutos);
+            this.panel2.Controls.Add(this.numUpDoHoras);
+            this.panel2.Controls.Add(this.cboPistaReservas);
+            this.panel2.Controls.Add(this.dateTimePickerReservas);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Location = new System.Drawing.Point(21, 209);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(656, 125);
+            this.panel2.TabIndex = 18;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(26, 88);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(60, 13);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Hora inicio:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(26, 53);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(40, 13);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Fecha:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(26, 17);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(33, 13);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Pista:";
+            // 
+            // dateTimePickerReservas
+            // 
+            this.dateTimePickerReservas.Location = new System.Drawing.Point(98, 53);
+            this.dateTimePickerReservas.MinDate = new System.DateTime(2023, 11, 25, 19, 37, 5, 0);
+            this.dateTimePickerReservas.Name = "dateTimePickerReservas";
+            this.dateTimePickerReservas.Size = new System.Drawing.Size(205, 20);
+            this.dateTimePickerReservas.TabIndex = 7;
+            this.dateTimePickerReservas.Value = new System.DateTime(2023, 11, 25, 19, 37, 5, 0);
+            // 
+            // cboPistaReservas
+            // 
+            this.cboPistaReservas.FormattingEnabled = true;
+            this.cboPistaReservas.Location = new System.Drawing.Point(98, 17);
+            this.cboPistaReservas.Name = "cboPistaReservas";
+            this.cboPistaReservas.Size = new System.Drawing.Size(205, 21);
+            this.cboPistaReservas.TabIndex = 8;
+            this.cboPistaReservas.SelectedIndexChanged += new System.EventHandler(this.cboPistaReservas_SelectedIndexChanged);
+            // 
+            // numUpDoHoras
+            // 
+            this.numUpDoHoras.Location = new System.Drawing.Point(98, 86);
+            this.numUpDoHoras.Maximum = new decimal(new int[] {
+            22,
+            0,
+            0,
+            0});
+            this.numUpDoHoras.Minimum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.numUpDoHoras.Name = "numUpDoHoras";
+            this.numUpDoHoras.Size = new System.Drawing.Size(44, 20);
+            this.numUpDoHoras.TabIndex = 9;
+            this.numUpDoHoras.Value = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            // 
+            // numUpDoMinutos
+            // 
+            this.numUpDoMinutos.Location = new System.Drawing.Point(163, 86);
+            this.numUpDoMinutos.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.numUpDoMinutos.Name = "numUpDoMinutos";
+            this.numUpDoMinutos.Size = new System.Drawing.Size(44, 20);
+            this.numUpDoMinutos.TabIndex = 10;
+            // 
+            // pictureBoxReservas
+            // 
+            this.pictureBoxReservas.Location = new System.Drawing.Point(403, 3);
+            this.pictureBoxReservas.Name = "pictureBoxReservas";
+            this.pictureBoxReservas.Size = new System.Drawing.Size(250, 113);
+            this.pictureBoxReservas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxReservas.TabIndex = 11;
+            this.pictureBoxReservas.TabStop = false;
+            // 
+            // btnReservar
+            // 
+            this.btnReservar.Location = new System.Drawing.Point(310, 86);
+            this.btnReservar.Name = "btnReservar";
+            this.btnReservar.Size = new System.Drawing.Size(87, 30);
+            this.btnReservar.TabIndex = 12;
+            this.btnReservar.Text = "RESERVAR";
+            this.btnReservar.UseVisualStyleBackColor = true;
+            this.btnReservar.Click += new System.EventHandler(this.btnReservar_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(147, 88);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(10, 13);
+            this.label12.TabIndex = 13;
+            this.label12.Text = ":";
+            // 
+            // clubraquetaDataSet
+            // 
+            this.clubraquetaDataSet.DataSetName = "clubraquetaDataSet";
+            this.clubraquetaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // ReservasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(723, 500);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblRespuestaDniSocio);
             this.Controls.Add(this.cboSocio);
@@ -226,6 +374,12 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDoHoras)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDoMinutos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxReservas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clubraquetaDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,5 +406,17 @@
         private System.Windows.Forms.Label lblRespuestaDniSocio;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnReservar;
+        private System.Windows.Forms.PictureBox pictureBoxReservas;
+        private System.Windows.Forms.NumericUpDown numUpDoMinutos;
+        private System.Windows.Forms.NumericUpDown numUpDoHoras;
+        private System.Windows.Forms.ComboBox cboPistaReservas;
+        private System.Windows.Forms.DateTimePicker dateTimePickerReservas;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label12;
+        private clubraquetaDataSet clubraquetaDataSet;
     }
 }
