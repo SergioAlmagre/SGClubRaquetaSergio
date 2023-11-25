@@ -239,6 +239,9 @@ namespace SGClubRaquetaSergio
             return esCorrecto;
         }
 
-
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

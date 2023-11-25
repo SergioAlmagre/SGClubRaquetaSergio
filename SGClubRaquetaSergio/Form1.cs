@@ -24,28 +24,13 @@ namespace SGClubRaquetaSergio
 
         private void pistasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (this.MdiChildren.Length > 0)
+            PistasForm formulario = new PistasForm(); //FORMULARIO MODAL
+
+            if (formulario.ShowDialog() == DialogResult.Cancel)
             {
-                if (this.MdiChildren[0].Name != "PistasForm")
-                {
-                    DialogResult rs = MessageBox.Show("¿Seguro que desea salir?, Puedes perder los datos si no has guardado", "Atención!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (rs == DialogResult.Yes)
-                    {
-                        this.MdiChildren[0].Close();
-                        PistasForm formulario = new PistasForm();
-                        formulario.MdiParent = this;
-                        formulario.Dock = DockStyle.Fill;
-                        formulario.Show();
-                    }
-                }
+
             }
-            else
-            {
-                PistasForm formulario = new PistasForm();
-                formulario.MdiParent = this;
-                formulario.Dock = DockStyle.Fill;
-                formulario.Show();
-            }
+
         }
 
         private void rESERVASToolStripMenuItem_Click(object sender, EventArgs e)
@@ -102,28 +87,13 @@ namespace SGClubRaquetaSergio
 
         private void sToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (this.MdiChildren.Length > 0)
+
+            SociosForm formulario = new SociosForm(); //FORMULARIO MODAL
+
+            if (formulario.ShowDialog() == DialogResult.Cancel)
             {
-                if (this.MdiChildren[0].Name != "SociosForm")
-                {
-                    DialogResult rs = MessageBox.Show("¿Seguro que desea salir?, Puedes perder los datos si no has guardado", "Atención!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (rs == DialogResult.Yes)
-                    {
-                        this.MdiChildren[0].Close();
-                        SociosForm formulario = new SociosForm();
-                        formulario.MdiParent = this;
-                        formulario.Dock = DockStyle.Fill;
-                        formulario.Show();
-                    }
-                }
-            }
-            else
-            {
-                SociosForm formulario = new SociosForm();
-                formulario.MdiParent = this;
-                formulario.Dock = DockStyle.Fill;
-                formulario.Show();
-            }
+                        
+            } 
 
         }
 
