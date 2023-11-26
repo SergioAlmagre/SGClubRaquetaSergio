@@ -59,6 +59,8 @@
             this.btnReservar = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.clubraquetaDataSet = new SGClubRaquetaSergio.clubraquetaDataSet();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -228,6 +230,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.btnReservar);
             this.panel2.Controls.Add(this.pictureBoxReservas);
@@ -240,7 +244,7 @@
             this.panel2.Controls.Add(this.label9);
             this.panel2.Location = new System.Drawing.Point(21, 209);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(656, 125);
+            this.panel2.Size = new System.Drawing.Size(656, 123);
             this.panel2.TabIndex = 18;
             // 
             // label9
@@ -355,6 +359,26 @@
             this.clubraquetaDataSet.DataSetName = "clubraquetaDataSet";
             this.clubraquetaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(327, 46);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(62, 13);
+            this.label13.TabIndex = 16;
+            this.label13.Text = "Duracion:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(327, 59);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(58, 13);
+            this.label14.TabIndex = 17;
+            this.label14.Text = "1h 30min";
+            // 
             // ReservasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -418,5 +442,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label12;
         private clubraquetaDataSet clubraquetaDataSet;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
     }
 }

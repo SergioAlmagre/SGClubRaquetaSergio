@@ -54,7 +54,7 @@ namespace SGClubRaquetaSergio
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
-            DialogResult rs = MessageBox.Show("¿Estás seguro?", "Eliminar el alumno", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            DialogResult rs = MessageBox.Show("¿Estás seguro?", "Eliminar la pista", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
 
             if (rs == DialogResult.Yes)
             {
