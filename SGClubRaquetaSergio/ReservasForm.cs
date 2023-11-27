@@ -17,6 +17,7 @@ namespace SGClubRaquetaSergio
     {
         int idPista = 0;
         string dniSocio = "";
+        int idReserva = 0;
         public ReservasForm()
         {
             InitializeComponent();
@@ -27,6 +28,7 @@ namespace SGClubRaquetaSergio
         {
             clubraquetaDataSet dsDB = new clubraquetaDataSet();
             sociosTableAdapter sociosTableAdapter = new sociosTableAdapter();
+            reservasTableAdapter reservasTA = new reservasTableAdapter();
 
             var comboItem = (ComboItemRevervas)cboSocio.SelectedItem;
 
@@ -45,6 +47,10 @@ namespace SGClubRaquetaSergio
                 txtEmail.Text = socio.email;
                 lblRespuestaDniSocio.Text = socio.DNI;
             }
+
+            reservasTA.FillAllByDniSocio(dsDB.reservas, dniSocio);
+            dataGridViewReservas.DataSource = dsDB.reservas;
+            dataGridViewReservas.Columns[0].Visible = false;
 
         }
 
@@ -94,16 +100,13 @@ namespace SGClubRaquetaSergio
         }
 
 
-
-
-
         private void btnReservar_Click(object sender, EventArgs e)
         {
-            if (socioTieneReserva())
-            {
-                MessageBox.Show("El socio ya tiene una reserva hecha y no puedo reservar mas");
-                return;
-            }
+            //if (socioTieneReserva())
+            //{
+            //    MessageBox.Show("El socio ya tiene una reserva hecha y no puedo reservar mas");
+            //    return;
+            //}
             if (socioEsMoroso())
             {
                 MessageBox.Show("El socio tiene una reserva sin pagar y no puedo reservar");
@@ -138,19 +141,17 @@ namespace SGClubRaquetaSergio
                 {
                     reservasTA.InsertReserva(dateTimePickerReservas.Value.Date.ToString(), str_hora, idPista, lblRespuestaDniSocio.Text, "NO", coste);
                     MessageBox.Show("Pista reservada con éxito", "Gracias!");
-
+                    comboBox1_SelectedIndexChanged(sender, EventArgs.Empty);
                 }
                 else
                 {
                     MessageBox.Show("Reserva cancelada");
                 }
-                
             }
             else
             {
                 MessageBox.Show("Primero debe seleccionar un socio");
             }
-
         }
 
         private void cboPistaReservas_SelectedIndexChanged(object sender, EventArgs e)
@@ -209,7 +210,7 @@ namespace SGClubRaquetaSergio
             clubraquetaDataSet dsDB = new clubraquetaDataSet();
             reservasTableAdapter reservasTableAdapter = new reservasTableAdapter();
 
-            var cantidadSinPagar = reservasTableAdapter.CountSinPagarByDni(dniSocio);
+            var cantidadSinPagar = (int)reservasTableAdapter.CountSinPagarByDni(dniSocio);
 
             if (cantidadSinPagar > 0)
             {
@@ -279,6 +280,26 @@ namespace SGClubRaquetaSergio
             return costeTotal;
         }
 
+        private void bntPagar_Click(object sender, EventArgs e)
+        {
+            clubraquetaDataSet dsDB = new clubraquetaDataSet();
+            reservasTableAdapter reservasTA = new reservasTableAdapter();
 
+            reservasTA.UpdatePagadoByIdReserva("SI", idReserva);
+            comboBox1_SelectedIndexChanged(sender, EventArgs.Empty);
+        }
+
+        private void dataGridViewReservas_SelectionChanged(object sender, EventArgs e)
+        {
+            clubraquetaDataSet dsDB = new clubraquetaDataSet();
+            reservasTableAdapter reservasTA = new reservasTableAdapter();
+
+            if(dataGridViewReservas.SelectedRows.Count > 0)
+            {
+                // Obtén el valor de la celda en la columna con índice 0 (puedes ajustar el índice según tus necesidades)
+                idReserva = (int)dataGridViewReservas.SelectedRows[0].Cells[0].Value;
+            }
+   
+        }
     }
 }
