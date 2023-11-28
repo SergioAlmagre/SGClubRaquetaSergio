@@ -72,36 +72,40 @@
             // idPistaLabel
             // 
             idPistaLabel.AutoSize = true;
-            idPistaLabel.Location = new System.Drawing.Point(60, 92);
+            idPistaLabel.Location = new System.Drawing.Point(80, 113);
+            idPistaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             idPistaLabel.Name = "idPistaLabel";
-            idPistaLabel.Size = new System.Drawing.Size(44, 13);
+            idPistaLabel.Size = new System.Drawing.Size(54, 16);
             idPistaLabel.TabIndex = 1;
             idPistaLabel.Text = "id Pista:";
             // 
             // nombreLabel
             // 
             nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(60, 121);
+            nombreLabel.Location = new System.Drawing.Point(80, 149);
+            nombreLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(45, 13);
+            nombreLabel.Size = new System.Drawing.Size(56, 16);
             nombreLabel.TabIndex = 3;
             nombreLabel.Text = "nombre:";
             // 
             // ubicacionLabel
             // 
             ubicacionLabel.AutoSize = true;
-            ubicacionLabel.Location = new System.Drawing.Point(60, 149);
+            ubicacionLabel.Location = new System.Drawing.Point(80, 183);
+            ubicacionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             ubicacionLabel.Name = "ubicacionLabel";
-            ubicacionLabel.Size = new System.Drawing.Size(56, 13);
+            ubicacionLabel.Size = new System.Drawing.Size(68, 16);
             ubicacionLabel.TabIndex = 5;
             ubicacionLabel.Text = "ubicacion:";
             // 
             // precioHoraLabel
             // 
             precioHoraLabel.AutoSize = true;
-            precioHoraLabel.Location = new System.Drawing.Point(60, 237);
+            precioHoraLabel.Location = new System.Drawing.Point(80, 292);
+            precioHoraLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             precioHoraLabel.Name = "precioHoraLabel";
-            precioHoraLabel.Size = new System.Drawing.Size(65, 13);
+            precioHoraLabel.Size = new System.Drawing.Size(81, 16);
             precioHoraLabel.TabIndex = 7;
             precioHoraLabel.Text = "precio Hora:";
             // 
@@ -111,6 +115,7 @@
             this.pistasBindingNavigator.BindingSource = this.pistasBindingSource;
             this.pistasBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.pistasBindingNavigator.DeleteItem = null;
+            this.pistasBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.pistasBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -131,7 +136,7 @@
             this.pistasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.pistasBindingNavigator.Name = "pistasBindingNavigator";
             this.pistasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.pistasBindingNavigator.Size = new System.Drawing.Size(737, 25);
+            this.pistasBindingNavigator.Size = new System.Drawing.Size(983, 27);
             this.pistasBindingNavigator.TabIndex = 0;
             this.pistasBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -141,7 +146,7 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
             // 
             // pistasBindingSource
@@ -157,7 +162,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 28);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
             // 
@@ -167,7 +172,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
             // 
             // bindingNavigatorMovePreviousItem
@@ -176,13 +181,13 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -190,14 +195,14 @@
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(65, 27);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -205,7 +210,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
             // 
             // bindingNavigatorMoveLastItem
@@ -214,13 +219,13 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveLastItem.Text = "Mover último";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorDeleteItem
             // 
@@ -228,7 +233,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorDeleteItem.Text = "Eliminar";
             this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
@@ -237,59 +242,65 @@
             this.pistasBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.pistasBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("pistasBindingNavigatorSaveItem.Image")));
             this.pistasBindingNavigatorSaveItem.Name = "pistasBindingNavigatorSaveItem";
-            this.pistasBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.pistasBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 28);
             this.pistasBindingNavigatorSaveItem.Text = "Guardar datos";
             this.pistasBindingNavigatorSaveItem.Click += new System.EventHandler(this.pistasBindingNavigatorSaveItem_Click_1);
             // 
             // idPistaLabel1
             // 
             this.idPistaLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pistasBindingSource, "idPista", true));
-            this.idPistaLabel1.Location = new System.Drawing.Point(153, 92);
+            this.idPistaLabel1.Location = new System.Drawing.Point(204, 113);
+            this.idPistaLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.idPistaLabel1.Name = "idPistaLabel1";
-            this.idPistaLabel1.Size = new System.Drawing.Size(78, 13);
+            this.idPistaLabel1.Size = new System.Drawing.Size(104, 16);
             this.idPistaLabel1.TabIndex = 2;
             this.idPistaLabel1.Text = "label1";
             // 
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pistasBindingSource, "nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(156, 118);
+            this.nombreTextBox.Location = new System.Drawing.Point(208, 145);
+            this.nombreTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(291, 20);
+            this.nombreTextBox.Size = new System.Drawing.Size(387, 22);
             this.nombreTextBox.TabIndex = 4;
             // 
             // ubicacionTextBox
             // 
             this.ubicacionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pistasBindingSource, "ubicacion", true));
-            this.ubicacionTextBox.Location = new System.Drawing.Point(156, 146);
+            this.ubicacionTextBox.Location = new System.Drawing.Point(208, 180);
+            this.ubicacionTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ubicacionTextBox.Multiline = true;
             this.ubicacionTextBox.Name = "ubicacionTextBox";
-            this.ubicacionTextBox.Size = new System.Drawing.Size(291, 82);
+            this.ubicacionTextBox.Size = new System.Drawing.Size(387, 100);
             this.ubicacionTextBox.TabIndex = 6;
             // 
             // precioHoraTextBox
             // 
             this.precioHoraTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pistasBindingSource, "precioHora", true));
-            this.precioHoraTextBox.Location = new System.Drawing.Point(156, 234);
+            this.precioHoraTextBox.Location = new System.Drawing.Point(208, 288);
+            this.precioHoraTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.precioHoraTextBox.Name = "precioHoraTextBox";
-            this.precioHoraTextBox.Size = new System.Drawing.Size(291, 20);
+            this.precioHoraTextBox.Size = new System.Drawing.Size(387, 22);
             this.precioHoraTextBox.TabIndex = 8;
             // 
             // fotoPictureBox
             // 
             this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.pistasBindingSource, "foto", true));
-            this.fotoPictureBox.Location = new System.Drawing.Point(470, 79);
+            this.fotoPictureBox.Location = new System.Drawing.Point(627, 97);
+            this.fotoPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fotoPictureBox.Name = "fotoPictureBox";
-            this.fotoPictureBox.Size = new System.Drawing.Size(212, 171);
+            this.fotoPictureBox.Size = new System.Drawing.Size(283, 210);
             this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.fotoPictureBox.TabIndex = 10;
             this.fotoPictureBox.TabStop = false;
             // 
             // btnNuevaFoto
             // 
-            this.btnNuevaFoto.Location = new System.Drawing.Point(470, 279);
+            this.btnNuevaFoto.Location = new System.Drawing.Point(627, 343);
+            this.btnNuevaFoto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNuevaFoto.Name = "btnNuevaFoto";
-            this.btnNuevaFoto.Size = new System.Drawing.Size(212, 23);
+            this.btnNuevaFoto.Size = new System.Drawing.Size(283, 28);
             this.btnNuevaFoto.TabIndex = 11;
             this.btnNuevaFoto.Text = "NUEVA FOTO";
             this.btnNuevaFoto.UseVisualStyleBackColor = true;
@@ -313,9 +324,9 @@
             // 
             // PistasForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(737, 369);
+            this.ClientSize = new System.Drawing.Size(983, 454);
             this.Controls.Add(this.btnNuevaFoto);
             this.Controls.Add(idPistaLabel);
             this.Controls.Add(this.idPistaLabel1);
@@ -328,7 +339,7 @@
             this.Controls.Add(this.fotoPictureBox);
             this.Controls.Add(this.pistasBindingNavigator);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PistasForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PistasForm2";
