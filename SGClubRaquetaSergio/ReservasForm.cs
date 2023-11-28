@@ -23,7 +23,6 @@ namespace SGClubRaquetaSergio
             InitializeComponent();
         }
 
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             clubraquetaDataSet dsDB = new clubraquetaDataSet();
