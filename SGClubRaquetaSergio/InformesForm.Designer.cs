@@ -44,19 +44,21 @@
             // dataGridViewInformes
             // 
             this.dataGridViewInformes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewInformes.Location = new System.Drawing.Point(25, 399);
+            this.dataGridViewInformes.Location = new System.Drawing.Point(19, 324);
+            this.dataGridViewInformes.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewInformes.Name = "dataGridViewInformes";
             this.dataGridViewInformes.RowHeadersWidth = 51;
             this.dataGridViewInformes.RowTemplate.Height = 24;
-            this.dataGridViewInformes.Size = new System.Drawing.Size(870, 295);
+            this.dataGridViewInformes.Size = new System.Drawing.Size(652, 240);
             this.dataGridViewInformes.TabIndex = 0;
             this.dataGridViewInformes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewInformes_CellContentClick);
             // 
             // btn1
             // 
-            this.btn1.Location = new System.Drawing.Point(25, 31);
+            this.btn1.Location = new System.Drawing.Point(19, 25);
+            this.btn1.Margin = new System.Windows.Forms.Padding(2);
             this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(870, 40);
+            this.btn1.Size = new System.Drawing.Size(652, 32);
             this.btn1.TabIndex = 1;
             this.btn1.Text = "PISTA MAS ALQUILADA";
             this.btn1.UseVisualStyleBackColor = true;
@@ -64,9 +66,10 @@
             // 
             // btn2
             // 
-            this.btn2.Location = new System.Drawing.Point(25, 77);
+            this.btn2.Location = new System.Drawing.Point(19, 63);
+            this.btn2.Margin = new System.Windows.Forms.Padding(2);
             this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(870, 40);
+            this.btn2.Size = new System.Drawing.Size(652, 32);
             this.btn2.TabIndex = 2;
             this.btn2.Text = "PISTA MENOS ALQUILADA";
             this.btn2.UseVisualStyleBackColor = true;
@@ -74,9 +77,10 @@
             // 
             // btn3
             // 
-            this.btn3.Location = new System.Drawing.Point(24, 123);
+            this.btn3.Location = new System.Drawing.Point(18, 100);
+            this.btn3.Margin = new System.Windows.Forms.Padding(2);
             this.btn3.Name = "btn3";
-            this.btn3.Size = new System.Drawing.Size(870, 40);
+            this.btn3.Size = new System.Drawing.Size(652, 32);
             this.btn3.TabIndex = 3;
             this.btn3.Text = "PISTAS POR ORDEN ALQUILER MAS A MENOS";
             this.btn3.UseVisualStyleBackColor = true;
@@ -84,29 +88,32 @@
             // 
             // btn4
             // 
-            this.btn4.Location = new System.Drawing.Point(25, 169);
+            this.btn4.Location = new System.Drawing.Point(19, 137);
+            this.btn4.Margin = new System.Windows.Forms.Padding(2);
             this.btn4.Name = "btn4";
-            this.btn4.Size = new System.Drawing.Size(870, 40);
+            this.btn4.Size = new System.Drawing.Size(652, 32);
             this.btn4.TabIndex = 4;
-            this.btn4.Text = "SOCIO MOROSOS";
+            this.btn4.Text = "SOCIO MAS MOROSOS";
             this.btn4.UseVisualStyleBackColor = true;
             this.btn4.Click += new System.EventHandler(this.btn4_Click);
             // 
             // btn5
             // 
-            this.btn5.Location = new System.Drawing.Point(24, 215);
+            this.btn5.Location = new System.Drawing.Point(18, 175);
+            this.btn5.Margin = new System.Windows.Forms.Padding(2);
             this.btn5.Name = "btn5";
-            this.btn5.Size = new System.Drawing.Size(870, 40);
+            this.btn5.Size = new System.Drawing.Size(652, 32);
             this.btn5.TabIndex = 5;
-            this.btn5.Text = "CANTIODAD TOTAL PAGADA POR SOCIO";
+            this.btn5.Text = "CANTIDAD TOTAL PAGADA POR SOCIO";
             this.btn5.UseVisualStyleBackColor = true;
             this.btn5.Click += new System.EventHandler(this.btn5_Click);
             // 
             // btn6
             // 
-            this.btn6.Location = new System.Drawing.Point(25, 261);
+            this.btn6.Location = new System.Drawing.Point(19, 212);
+            this.btn6.Margin = new System.Windows.Forms.Padding(2);
             this.btn6.Name = "btn6";
-            this.btn6.Size = new System.Drawing.Size(870, 40);
+            this.btn6.Size = new System.Drawing.Size(652, 32);
             this.btn6.TabIndex = 6;
             this.btn6.Text = "PISTAS ALQUILADAS AHORA MISMO";
             this.btn6.UseVisualStyleBackColor = true;
@@ -114,9 +121,10 @@
             // 
             // btn7
             // 
-            this.btn7.Location = new System.Drawing.Point(25, 307);
+            this.btn7.Location = new System.Drawing.Point(19, 249);
+            this.btn7.Margin = new System.Windows.Forms.Padding(2);
             this.btn7.Name = "btn7";
-            this.btn7.Size = new System.Drawing.Size(870, 40);
+            this.btn7.Size = new System.Drawing.Size(652, 32);
             this.btn7.TabIndex = 7;
             this.btn7.Text = "HORA DE INICIO MAS FRECUENTE DE ALQUILER";
             this.btn7.UseVisualStyleBackColor = true;
@@ -124,9 +132,10 @@
             // 
             // btn8
             // 
-            this.btn8.Location = new System.Drawing.Point(25, 353);
+            this.btn8.Location = new System.Drawing.Point(19, 287);
+            this.btn8.Margin = new System.Windows.Forms.Padding(2);
             this.btn8.Name = "btn8";
-            this.btn8.Size = new System.Drawing.Size(870, 40);
+            this.btn8.Size = new System.Drawing.Size(652, 32);
             this.btn8.TabIndex = 8;
             this.btn8.Text = "NOMBRE Y PRECIO PISTAS DE MAYOR A MENOR";
             this.btn8.UseVisualStyleBackColor = true;
@@ -134,9 +143,10 @@
             // 
             // btn9
             // 
-            this.btn9.Location = new System.Drawing.Point(25, 700);
+            this.btn9.Location = new System.Drawing.Point(19, 569);
+            this.btn9.Margin = new System.Windows.Forms.Padding(2);
             this.btn9.Name = "btn9";
-            this.btn9.Size = new System.Drawing.Size(870, 40);
+            this.btn9.Size = new System.Drawing.Size(652, 32);
             this.btn9.TabIndex = 9;
             this.btn9.Text = "LIMPIAR";
             this.btn9.UseVisualStyleBackColor = true;
@@ -144,9 +154,9 @@
             // 
             // InformesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(925, 752);
+            this.ClientSize = new System.Drawing.Size(694, 611);
             this.Controls.Add(this.btn9);
             this.Controls.Add(this.btn8);
             this.Controls.Add(this.btn7);
@@ -158,6 +168,7 @@
             this.Controls.Add(this.btn1);
             this.Controls.Add(this.dataGridViewInformes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "InformesForm";
             this.Text = "InformesForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInformes)).EndInit();

@@ -28,15 +28,13 @@ namespace SGClubRaquetaSergio
                    .Select(g => g.Key)
                    .FirstOrDefault();
 
-                if (pistaMasAlquiladaId != null)
-                {
                     var pistaObj = objDB.pistas
                         .Where(r => r.idPista == pistaMasAlquiladaId)
                         .ToList();
 
                     dataGridViewInformes.DataSource = pistaObj;
                     dataGridViewInformes.Columns[5].Visible = false;
-                }             
+                           
             }
 
         }
@@ -46,18 +44,20 @@ namespace SGClubRaquetaSergio
             dataGridViewInformes.DataSource = null;
             using (clubraquetaEntities objDB = new clubraquetaEntities())
             {
-                var pistaMenosAlquilada = objDB.reservas
-                 .GroupBy(r => r.pista)
-                 .OrderBy(g => g.Count())
-                 .Select(g => g.Key)
-                 .FirstOrDefault();
+                var pistaMenosAlquida = from pistas in objDB.pistas
+                                        join reservas in objDB.reservas on pistas.idPista equals reservas.pista
+                                        group pistas by pistas.idPista into g
+                                        orderby g.Count() ascending
+                                        select new
+                                        {
+                                            IdPista = g.Key,
+                                            Nombre = g.Select(p => p.nombre).FirstOrDefault(),
+                                            Ubicacion = g.Select(p => p.ubicacion).FirstOrDefault(),
+                                            PrecioHora = g.Select(p => p.precioHora).FirstOrDefault(),
+                                            Foto = g.Select(p => p.foto).FirstOrDefault(),
+                                        };
 
-                var pistaMenosAlquiladaObj = objDB.pistas
-                    .Where(p => p.idPista == pistaMenosAlquilada).ToList()
-                    .FirstOrDefault();
-
-                dataGridViewInformes.DataSource = pistaMenosAlquiladaObj;
- 
+                dataGridViewInformes.DataSource = pistaMenosAlquida.ToList();
             }
         }
 
@@ -66,33 +66,6 @@ namespace SGClubRaquetaSergio
                 dataGridViewInformes.DataSource = null;
                 using (clubraquetaEntities objDB = new clubraquetaEntities())
                 {
-                //OPCION 1 MAS SENCILLA SIN OBTENER NINGUN VALOR MAS QUE NO SEA UN ATRIBUTO DEL OBJETO
-                //var pistaMasAlquildasId = objDB.reservas
-                //.GroupBy(r => r.pista)
-                //.OrderByDescending(g => g.Count())
-                //.Select(g => g.Key).ToList(); //Obtiene solo el id con el comando Key
-
-                //var pistasDetalles = new List<pistas>();
-
-                //foreach (var item in pistaMasAlquildasId)
-                //{
-                //    var pista = objDB.pistas.FirstOrDefault(p => p.idPista == item);
-                //    if (pista != null)
-                //    {
-                //        pistasDetalles.Add(pista);
-                //    }
-                //}
-
-                //var resultadoFinal = pistasDetalles.Select(p => new
-                //{
-                //    IdPista = p.idPista,
-                //    Nombre = p.nombre,
-                //    Ubicacion = p.ubicacion,
-                //    PrecioHora = p.precioHora,
-                //    Foto = p.foto
-                //});
-
-                //dataGridViewInformes.DataSource = resultadoFinal.ToList();
 
                 var pistasOrdenadasPorPopularidad = objDB.reservas
                     .GroupBy(r => r.pista)
@@ -150,8 +123,24 @@ namespace SGClubRaquetaSergio
         {
             using (clubraquetaEntities objDB = new clubraquetaEntities())
             {
+                var resultado = objDB.socios
+                    .Join(
+                        objDB.reservas,
+                        socio => socio.DNI,
+                        reserva => reserva.socio,
+                        (socio, reserva) => new { Socio = socio, Reserva = reserva }
+                    )
+                    .GroupBy(joined => new { joined.Socio.nombre, joined.Socio.apellidos })
+                    .Select(group => new
+                    {
+                        Nombre = group.Key.nombre,
+                        Apellidos = group.Key.apellidos,
+                        TotalCantidad = group.Sum(j => j.Reserva.cantidad)
+                    })
+                    .OrderByDescending(result => result.TotalCantidad)
+                    .ToList();
 
-
+                dataGridViewInformes.DataSource = resultado;
             }
         }
 
@@ -159,17 +148,49 @@ namespace SGClubRaquetaSergio
         {
             using (clubraquetaEntities objDB = new clubraquetaEntities())
             {
+                var fechaInicioMasHoraYMedia = DateTime.Now.AddHours(1.5);
 
+                var pistasAlquiladasAhoraMismo = from p in objDB.pistas
+                                                 join r in objDB.reservas on p.idPista equals r.pista
+                                                 where r.fecha >= DateTime.Now && fechaInicioMasHoraYMedia <= DateTime.Now
+                                                 select new
+                                                 {
+                                                     IdPista = p.idPista,
+                                                     Nombre = p.nombre,
+                                                     Hora = r.hora, // Cambié r.fecha a r.hora para obtener la hora de la reserva
+                                                     Ubicacion = p.ubicacion,
+                                                     PrecioHora = p.precioHora,
+                                                     Foto = p.foto
+                                                 };
+
+
+                if (!pistasAlquiladasAhoraMismo.Any())
+                {
+                    MessageBox.Show("No hay pistas alquiladas ahora mismo");
+                    return;
+                }
+
+                dataGridViewInformes.DataSource = pistasAlquiladasAhoraMismo.ToList();
 
             }
         }
 
         private void btn7_Click(object sender, EventArgs e)
         {
+            dataGridViewInformes.DataSource = null;
+
             using (clubraquetaEntities objDB = new clubraquetaEntities())
             {
+                var horaAlquilerMasFrecuente = from r in objDB.reservas
+                                               group r by r.hora into g
+                                               orderby g.Count() descending
+                                               select new
+                                               {
+                                                   Hora = g.Key,
+                                                   Cantidad = g.Count()
+                                               };
 
-
+                dataGridViewInformes.DataSource = horaAlquilerMasFrecuente.ToList();
             }
         }
 
@@ -177,8 +198,16 @@ namespace SGClubRaquetaSergio
         {
             using (clubraquetaEntities objDB = new clubraquetaEntities())
             {
+                dataGridViewInformes.DataSource = null;
 
-
+                var nombreYPrecioPistaMayorAMenor = from p in objDB.pistas
+                                                    orderby p.precioHora descending
+                                                    select new
+                                                    {
+                                                        Nombre = p.nombre,
+                                                        PrecioHora = p.precioHora
+                                                    };
+                dataGridViewInformes.DataSource = nombreYPrecioPistaMayorAMenor.ToList();
             }
         }
 
