@@ -185,7 +185,6 @@ namespace SGClubRaquetaSergio
                             txtTelefono.Text = socioSeleccionado.telefono;
                             txtCuentaCorriente.Text = socioSeleccionado.cuentaCorriente;
                         }
-
                     }
                 }
                 catch (Exception ex)

@@ -55,12 +55,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Busquedas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas.Designer.cs">
+      <DependentUpon>Busquedas.cs</DependentUpon>
+    </Compile>
     <Compile Include="clubraquetaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>clubraquetaDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="ComboItemRevervas.cs" />
+    <Compile Include="Extensiones.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +130,9 @@
     <Compile Include="SociosForm.Designer.cs">
       <DependentUpon>SociosForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Busquedas.resx">
+      <DependentUpon>Busquedas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

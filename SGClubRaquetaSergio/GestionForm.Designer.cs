@@ -86,9 +86,7 @@
             this.btnModificarSocio = new System.Windows.Forms.Button();
             this.btnModificarReserva = new System.Windows.Forms.Button();
             this.btnModificarPista = new System.Windows.Forms.Button();
-            this.btnBuscarPista = new System.Windows.Forms.Button();
-            this.btnBuscarSocio = new System.Windows.Forms.Button();
-            this.btnBuscarReserva = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.txtIdPistaPista = new System.Windows.Forms.TextBox();
             this.txtMaskCuentaC = new System.Windows.Forms.MaskedTextBox();
             this.txtMaskEmail = new System.Windows.Forms.MaskedTextBox();
@@ -128,64 +126,69 @@
             // fechaLabel
             // 
             fechaLabel.AutoSize = true;
-            fechaLabel.Location = new System.Drawing.Point(52, 76);
+            fechaLabel.Location = new System.Drawing.Point(69, 94);
+            fechaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             fechaLabel.Name = "fechaLabel";
-            fechaLabel.Size = new System.Drawing.Size(37, 13);
+            fechaLabel.Size = new System.Drawing.Size(43, 16);
             fechaLabel.TabIndex = 3;
             fechaLabel.Text = "fecha:";
             // 
             // horaLabel
             // 
             horaLabel.AutoSize = true;
-            horaLabel.Location = new System.Drawing.Point(52, 101);
+            horaLabel.Location = new System.Drawing.Point(69, 124);
+            horaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             horaLabel.Name = "horaLabel";
-            horaLabel.Size = new System.Drawing.Size(31, 13);
+            horaLabel.Size = new System.Drawing.Size(37, 16);
             horaLabel.TabIndex = 5;
             horaLabel.Text = "hora:";
             // 
             // pistaLabel
             // 
             pistaLabel.AutoSize = true;
-            pistaLabel.Location = new System.Drawing.Point(52, 127);
+            pistaLabel.Location = new System.Drawing.Point(69, 156);
+            pistaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             pistaLabel.Name = "pistaLabel";
-            pistaLabel.Size = new System.Drawing.Size(32, 13);
+            pistaLabel.Size = new System.Drawing.Size(39, 16);
             pistaLabel.TabIndex = 7;
             pistaLabel.Text = "pista:";
             // 
             // socioLabel
             // 
             socioLabel.AutoSize = true;
-            socioLabel.Location = new System.Drawing.Point(52, 154);
+            socioLabel.Location = new System.Drawing.Point(69, 190);
+            socioLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             socioLabel.Name = "socioLabel";
-            socioLabel.Size = new System.Drawing.Size(35, 13);
+            socioLabel.Size = new System.Drawing.Size(43, 16);
             socioLabel.TabIndex = 9;
             socioLabel.Text = "socio:";
             // 
             // pagadoLabel
             // 
             pagadoLabel.AutoSize = true;
-            pagadoLabel.Location = new System.Drawing.Point(52, 181);
+            pagadoLabel.Location = new System.Drawing.Point(69, 223);
+            pagadoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             pagadoLabel.Name = "pagadoLabel";
-            pagadoLabel.Size = new System.Drawing.Size(46, 13);
+            pagadoLabel.Size = new System.Drawing.Size(58, 16);
             pagadoLabel.TabIndex = 11;
             pagadoLabel.Text = "pagado:";
             // 
             // cantidadLabel
             // 
             cantidadLabel.AutoSize = true;
-            cantidadLabel.Location = new System.Drawing.Point(52, 207);
+            cantidadLabel.Location = new System.Drawing.Point(69, 255);
+            cantidadLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             cantidadLabel.Name = "cantidadLabel";
-            cantidadLabel.Size = new System.Drawing.Size(51, 13);
+            cantidadLabel.Size = new System.Drawing.Size(62, 16);
             cantidadLabel.TabIndex = 13;
             cantidadLabel.Text = "cantidad:";
             // 
             // idReservaLabel1
             // 
             idReservaLabel1.AutoSize = true;
-            idReservaLabel1.Location = new System.Drawing.Point(52, 50);
-            idReservaLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            idReservaLabel1.Location = new System.Drawing.Point(69, 62);
             idReservaLabel1.Name = "idReservaLabel1";
-            idReservaLabel1.Size = new System.Drawing.Size(61, 13);
+            idReservaLabel1.Size = new System.Drawing.Size(76, 16);
             idReservaLabel1.TabIndex = 50;
             idReservaLabel1.Text = "id Reserva:";
             // 
@@ -237,7 +240,7 @@
             this.reservasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.reservasBindingNavigator.Name = "reservasBindingNavigator";
             this.reservasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.reservasBindingNavigator.Size = new System.Drawing.Size(688, 27);
+            this.reservasBindingNavigator.Size = new System.Drawing.Size(917, 27);
             this.reservasBindingNavigator.TabIndex = 0;
             this.reservasBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -247,13 +250,13 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
             // 
@@ -263,7 +266,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
             // 
             // bindingNavigatorMovePreviousItem
@@ -272,7 +275,7 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
             // 
             // bindingNavigatorSeparator
@@ -286,7 +289,7 @@
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(65, 27);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
             // 
@@ -301,7 +304,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
             // 
             // bindingNavigatorMoveLastItem
@@ -310,7 +313,7 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveLastItem.Text = "Mover último";
             // 
             // bindingNavigatorSeparator2
@@ -324,16 +327,17 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorDeleteItem.Text = "Eliminar";
             this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
             // txtDataPickerFecha
             // 
             this.txtDataPickerFecha.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.reservasBindingSource, "fecha", true));
-            this.txtDataPickerFecha.Location = new System.Drawing.Point(119, 72);
+            this.txtDataPickerFecha.Location = new System.Drawing.Point(159, 89);
+            this.txtDataPickerFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDataPickerFecha.Name = "txtDataPickerFecha";
-            this.txtDataPickerFecha.Size = new System.Drawing.Size(211, 20);
+            this.txtDataPickerFecha.Size = new System.Drawing.Size(280, 22);
             this.txtDataPickerFecha.TabIndex = 4;
             // 
             // txtPistaReserva
@@ -342,9 +346,10 @@
             this.txtPistaReserva.DataSource = this.pistasBindingSource1;
             this.txtPistaReserva.DisplayMember = "nombre";
             this.txtPistaReserva.FormattingEnabled = true;
-            this.txtPistaReserva.Location = new System.Drawing.Point(119, 124);
+            this.txtPistaReserva.Location = new System.Drawing.Point(159, 153);
+            this.txtPistaReserva.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPistaReserva.Name = "txtPistaReserva";
-            this.txtPistaReserva.Size = new System.Drawing.Size(211, 21);
+            this.txtPistaReserva.Size = new System.Drawing.Size(280, 24);
             this.txtPistaReserva.TabIndex = 8;
             this.txtPistaReserva.ValueMember = "idPista";
             this.txtPistaReserva.SelectedValueChanged += new System.EventHandler(this.txtPistaReserva_SelectedValueChanged);
@@ -365,9 +370,10 @@
             this.txtSocioReserva.DataSource = this.sociosBindingSource;
             this.txtSocioReserva.DisplayMember = "apellidos";
             this.txtSocioReserva.FormattingEnabled = true;
-            this.txtSocioReserva.Location = new System.Drawing.Point(119, 151);
+            this.txtSocioReserva.Location = new System.Drawing.Point(159, 186);
+            this.txtSocioReserva.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSocioReserva.Name = "txtSocioReserva";
-            this.txtSocioReserva.Size = new System.Drawing.Size(211, 21);
+            this.txtSocioReserva.Size = new System.Drawing.Size(280, 24);
             this.txtSocioReserva.TabIndex = 10;
             this.txtSocioReserva.ValueMember = "DNI";
             this.txtSocioReserva.SelectedValueChanged += new System.EventHandler(this.txtSocioReserva_SelectedValueChanged);
@@ -385,182 +391,204 @@
             // txtPagado
             // 
             this.txtPagado.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservasBindingSource, "pagado", true));
-            this.txtPagado.Location = new System.Drawing.Point(119, 178);
+            this.txtPagado.Location = new System.Drawing.Point(159, 219);
+            this.txtPagado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPagado.Name = "txtPagado";
-            this.txtPagado.Size = new System.Drawing.Size(211, 20);
+            this.txtPagado.Size = new System.Drawing.Size(280, 22);
             this.txtPagado.TabIndex = 12;
             // 
             // txtCantidad
             // 
             this.txtCantidad.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservasBindingSource, "cantidad", true));
-            this.txtCantidad.Location = new System.Drawing.Point(119, 204);
+            this.txtCantidad.Location = new System.Drawing.Point(159, 251);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(211, 20);
+            this.txtCantidad.Size = new System.Drawing.Size(280, 22);
             this.txtCantidad.TabIndex = 14;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(382, 50);
+            this.label1.Location = new System.Drawing.Point(509, 62);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 13);
+            this.label1.Size = new System.Drawing.Size(30, 16);
             this.label1.TabIndex = 15;
             this.label1.Text = "DNI";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(382, 76);
+            this.label2.Location = new System.Drawing.Point(509, 94);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(56, 16);
             this.label2.TabIndex = 16;
             this.label2.Text = "Nombre";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(382, 102);
+            this.label3.Location = new System.Drawing.Point(509, 126);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.Size = new System.Drawing.Size(64, 16);
             this.label3.TabIndex = 17;
             this.label3.Text = "Apellidos";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(382, 128);
+            this.label4.Location = new System.Drawing.Point(509, 158);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.Size = new System.Drawing.Size(63, 16);
             this.label4.TabIndex = 18;
             this.label4.Text = "Domicilio";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(382, 156);
+            this.label5.Location = new System.Drawing.Point(509, 192);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.Size = new System.Drawing.Size(61, 16);
             this.label5.TabIndex = 19;
             this.label5.Text = "Teléfono";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(382, 182);
+            this.label6.Location = new System.Drawing.Point(509, 224);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 13);
+            this.label6.Size = new System.Drawing.Size(41, 16);
             this.label6.TabIndex = 20;
             this.label6.Text = "Email";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(350, 206);
+            this.label7.Location = new System.Drawing.Point(467, 254);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 13);
+            this.label7.Size = new System.Drawing.Size(106, 16);
             this.label7.TabIndex = 21;
             this.label7.Text = "Cuenta Corriente";
             // 
             // txtDNI
             // 
-            this.txtDNI.Location = new System.Drawing.Point(442, 43);
+            this.txtDNI.Location = new System.Drawing.Point(589, 53);
+            this.txtDNI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(211, 20);
+            this.txtDNI.Size = new System.Drawing.Size(280, 22);
             this.txtDNI.TabIndex = 22;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(442, 72);
+            this.txtNombre.Location = new System.Drawing.Point(589, 89);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(211, 20);
+            this.txtNombre.Size = new System.Drawing.Size(280, 22);
             this.txtNombre.TabIndex = 24;
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(442, 99);
+            this.txtApellido.Location = new System.Drawing.Point(589, 122);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(211, 20);
+            this.txtApellido.Size = new System.Drawing.Size(280, 22);
             this.txtApellido.TabIndex = 25;
             // 
             // txtDomicilio
             // 
-            this.txtDomicilio.Location = new System.Drawing.Point(442, 126);
+            this.txtDomicilio.Location = new System.Drawing.Point(589, 155);
+            this.txtDomicilio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDomicilio.Name = "txtDomicilio";
-            this.txtDomicilio.Size = new System.Drawing.Size(211, 20);
+            this.txtDomicilio.Size = new System.Drawing.Size(280, 22);
             this.txtDomicilio.TabIndex = 26;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(60, 300);
+            this.label8.Location = new System.Drawing.Point(80, 369);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 13);
+            this.label8.Size = new System.Drawing.Size(48, 16);
             this.label8.TabIndex = 30;
             this.label8.Text = "idPista";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(60, 323);
+            this.label9.Location = new System.Drawing.Point(80, 398);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 13);
+            this.label9.Size = new System.Drawing.Size(56, 16);
             this.label9.TabIndex = 31;
             this.label9.Text = "Nombre";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(60, 347);
+            this.label10.Location = new System.Drawing.Point(80, 427);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 13);
+            this.label10.Size = new System.Drawing.Size(68, 16);
             this.label10.TabIndex = 32;
             this.label10.Text = "Ubicación";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(60, 371);
+            this.label11.Location = new System.Drawing.Point(80, 457);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 13);
+            this.label11.Size = new System.Drawing.Size(76, 16);
             this.label11.TabIndex = 33;
             this.label11.Text = "PrecioHora";
             // 
             // txtPrecioHora
             // 
-            this.txtPrecioHora.Location = new System.Drawing.Point(122, 372);
+            this.txtPrecioHora.Location = new System.Drawing.Point(163, 458);
+            this.txtPrecioHora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPrecioHora.Name = "txtPrecioHora";
-            this.txtPrecioHora.Size = new System.Drawing.Size(211, 20);
+            this.txtPrecioHora.Size = new System.Drawing.Size(280, 22);
             this.txtPrecioHora.TabIndex = 38;
             // 
             // txtUbicacion
             // 
-            this.txtUbicacion.Location = new System.Drawing.Point(122, 346);
+            this.txtUbicacion.Location = new System.Drawing.Point(163, 426);
+            this.txtUbicacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUbicacion.Name = "txtUbicacion";
-            this.txtUbicacion.Size = new System.Drawing.Size(211, 20);
+            this.txtUbicacion.Size = new System.Drawing.Size(280, 22);
             this.txtUbicacion.TabIndex = 37;
             // 
             // txtNombrePista
             // 
-            this.txtNombrePista.Location = new System.Drawing.Point(122, 320);
+            this.txtNombrePista.Location = new System.Drawing.Point(163, 394);
+            this.txtNombrePista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombrePista.Name = "txtNombrePista";
-            this.txtNombrePista.Size = new System.Drawing.Size(211, 20);
+            this.txtNombrePista.Size = new System.Drawing.Size(280, 22);
             this.txtNombrePista.TabIndex = 36;
             // 
             // fotoPictureBox
             // 
             this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.pistasBindingSource1, "foto", true));
-            this.fotoPictureBox.Location = new System.Drawing.Point(384, 293);
+            this.fotoPictureBox.Location = new System.Drawing.Point(512, 361);
+            this.fotoPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fotoPictureBox.Name = "fotoPictureBox";
-            this.fotoPictureBox.Size = new System.Drawing.Size(269, 167);
+            this.fotoPictureBox.Size = new System.Drawing.Size(359, 206);
             this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.fotoPictureBox.TabIndex = 39;
             this.fotoPictureBox.TabStop = false;
             // 
             // btnModificarFoto
             // 
-            this.btnModificarFoto.Location = new System.Drawing.Point(384, 476);
+            this.btnModificarFoto.Location = new System.Drawing.Point(512, 586);
+            this.btnModificarFoto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModificarFoto.Name = "btnModificarFoto";
-            this.btnModificarFoto.Size = new System.Drawing.Size(269, 23);
+            this.btnModificarFoto.Size = new System.Drawing.Size(359, 28);
             this.btnModificarFoto.TabIndex = 40;
             this.btnModificarFoto.Text = "MODIFICAR";
             this.btnModificarFoto.UseVisualStyleBackColor = true;
@@ -571,19 +599,21 @@
             this.dataGridGestion.AllowUserToAddRows = false;
             this.dataGridGestion.AllowUserToDeleteRows = false;
             this.dataGridGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridGestion.Location = new System.Drawing.Point(38, 516);
+            this.dataGridGestion.Location = new System.Drawing.Point(51, 635);
+            this.dataGridGestion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridGestion.Name = "dataGridGestion";
             this.dataGridGestion.ReadOnly = true;
             this.dataGridGestion.RowHeadersWidth = 51;
             this.dataGridGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridGestion.Size = new System.Drawing.Size(615, 150);
+            this.dataGridGestion.Size = new System.Drawing.Size(820, 185);
             this.dataGridGestion.TabIndex = 41;
             // 
             // btnModificarSocio
             // 
-            this.btnModificarSocio.Location = new System.Drawing.Point(442, 239);
+            this.btnModificarSocio.Location = new System.Drawing.Point(589, 294);
+            this.btnModificarSocio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModificarSocio.Name = "btnModificarSocio";
-            this.btnModificarSocio.Size = new System.Drawing.Size(211, 23);
+            this.btnModificarSocio.Size = new System.Drawing.Size(281, 28);
             this.btnModificarSocio.TabIndex = 42;
             this.btnModificarSocio.Text = "MODIFICAR";
             this.btnModificarSocio.UseVisualStyleBackColor = true;
@@ -591,9 +621,10 @@
             // 
             // btnModificarReserva
             // 
-            this.btnModificarReserva.Location = new System.Drawing.Point(119, 239);
+            this.btnModificarReserva.Location = new System.Drawing.Point(159, 294);
+            this.btnModificarReserva.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModificarReserva.Name = "btnModificarReserva";
-            this.btnModificarReserva.Size = new System.Drawing.Size(211, 23);
+            this.btnModificarReserva.Size = new System.Drawing.Size(281, 28);
             this.btnModificarReserva.TabIndex = 43;
             this.btnModificarReserva.Tag = "";
             this.btnModificarReserva.Text = "MODIFICAR";
@@ -602,82 +633,65 @@
             // 
             // btnModificarPista
             // 
-            this.btnModificarPista.Location = new System.Drawing.Point(122, 409);
+            this.btnModificarPista.Location = new System.Drawing.Point(163, 503);
+            this.btnModificarPista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModificarPista.Name = "btnModificarPista";
-            this.btnModificarPista.Size = new System.Drawing.Size(211, 23);
+            this.btnModificarPista.Size = new System.Drawing.Size(281, 28);
             this.btnModificarPista.TabIndex = 44;
             this.btnModificarPista.Text = "MODIFICAR";
             this.btnModificarPista.UseVisualStyleBackColor = true;
             this.btnModificarPista.Click += new System.EventHandler(this.btnModificarPista_Click);
             // 
-            // btnBuscarPista
+            // btnBuscar
             // 
-            this.btnBuscarPista.Location = new System.Drawing.Point(122, 449);
-            this.btnBuscarPista.Name = "btnBuscarPista";
-            this.btnBuscarPista.Size = new System.Drawing.Size(65, 60);
-            this.btnBuscarPista.TabIndex = 45;
-            this.btnBuscarPista.Text = "Buscar pista";
-            this.btnBuscarPista.UseVisualStyleBackColor = true;
-            this.btnBuscarPista.Click += new System.EventHandler(this.btnBuscarPista_Click);
-            // 
-            // btnBuscarSocio
-            // 
-            this.btnBuscarSocio.Location = new System.Drawing.Point(195, 449);
-            this.btnBuscarSocio.Name = "btnBuscarSocio";
-            this.btnBuscarSocio.Size = new System.Drawing.Size(66, 60);
-            this.btnBuscarSocio.TabIndex = 46;
-            this.btnBuscarSocio.Text = "Buscar socio";
-            this.btnBuscarSocio.UseVisualStyleBackColor = true;
-            this.btnBuscarSocio.Click += new System.EventHandler(this.btnBuscarSocio_Click);
-            // 
-            // btnBuscarReserva
-            // 
-            this.btnBuscarReserva.Location = new System.Drawing.Point(267, 449);
-            this.btnBuscarReserva.Name = "btnBuscarReserva";
-            this.btnBuscarReserva.Size = new System.Drawing.Size(66, 60);
-            this.btnBuscarReserva.TabIndex = 47;
-            this.btnBuscarReserva.Text = "Buscar reserva";
-            this.btnBuscarReserva.UseVisualStyleBackColor = true;
-            this.btnBuscarReserva.Click += new System.EventHandler(this.btnBuscarReserva_Click);
+            this.btnBuscar.Location = new System.Drawing.Point(163, 553);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(281, 61);
+            this.btnBuscar.TabIndex = 46;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscarSocio_Click);
             // 
             // txtIdPistaPista
             // 
-            this.txtIdPistaPista.Location = new System.Drawing.Point(122, 293);
+            this.txtIdPistaPista.Location = new System.Drawing.Point(163, 361);
+            this.txtIdPistaPista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIdPistaPista.Name = "txtIdPistaPista";
-            this.txtIdPistaPista.Size = new System.Drawing.Size(211, 20);
+            this.txtIdPistaPista.Size = new System.Drawing.Size(280, 22);
             this.txtIdPistaPista.TabIndex = 35;
             // 
             // txtMaskCuentaC
             // 
-            this.txtMaskCuentaC.Location = new System.Drawing.Point(442, 203);
-            this.txtMaskCuentaC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaskCuentaC.Location = new System.Drawing.Point(589, 250);
+            this.txtMaskCuentaC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMaskCuentaC.Name = "txtMaskCuentaC";
-            this.txtMaskCuentaC.Size = new System.Drawing.Size(211, 20);
+            this.txtMaskCuentaC.Size = new System.Drawing.Size(280, 22);
             this.txtMaskCuentaC.TabIndex = 48;
             // 
             // txtMaskEmail
             // 
-            this.txtMaskEmail.Location = new System.Drawing.Point(442, 177);
-            this.txtMaskEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaskEmail.Location = new System.Drawing.Point(589, 218);
+            this.txtMaskEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMaskEmail.Name = "txtMaskEmail";
-            this.txtMaskEmail.Size = new System.Drawing.Size(212, 20);
+            this.txtMaskEmail.Size = new System.Drawing.Size(281, 22);
             this.txtMaskEmail.TabIndex = 49;
             // 
             // txtMaskTelefono
             // 
-            this.txtMaskTelefono.Location = new System.Drawing.Point(442, 153);
-            this.txtMaskTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaskTelefono.Location = new System.Drawing.Point(589, 188);
+            this.txtMaskTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMaskTelefono.Name = "txtMaskTelefono";
-            this.txtMaskTelefono.Size = new System.Drawing.Size(211, 20);
+            this.txtMaskTelefono.Size = new System.Drawing.Size(280, 22);
             this.txtMaskTelefono.TabIndex = 50;
             // 
             // txtIdReserva
             // 
             this.txtIdReserva.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservasBindingSource, "idReserva", true));
-            this.txtIdReserva.Location = new System.Drawing.Point(119, 47);
-            this.txtIdReserva.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdReserva.Location = new System.Drawing.Point(159, 58);
+            this.txtIdReserva.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdReserva.Name = "txtIdReserva";
-            this.txtIdReserva.Size = new System.Drawing.Size(211, 20);
+            this.txtIdReserva.Size = new System.Drawing.Size(280, 22);
             this.txtIdReserva.TabIndex = 51;
             // 
             // reservasBindingSource1
@@ -705,27 +719,30 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(169, 100);
+            this.label12.Location = new System.Drawing.Point(225, 123);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(10, 13);
+            this.label12.Size = new System.Drawing.Size(10, 16);
             this.label12.TabIndex = 54;
             this.label12.Text = ":";
             // 
             // numUpDoMinutosGestion
             // 
-            this.numUpDoMinutosGestion.Location = new System.Drawing.Point(185, 98);
+            this.numUpDoMinutosGestion.Location = new System.Drawing.Point(247, 121);
+            this.numUpDoMinutosGestion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numUpDoMinutosGestion.Maximum = new decimal(new int[] {
             30,
             0,
             0,
             0});
             this.numUpDoMinutosGestion.Name = "numUpDoMinutosGestion";
-            this.numUpDoMinutosGestion.Size = new System.Drawing.Size(44, 20);
+            this.numUpDoMinutosGestion.Size = new System.Drawing.Size(59, 22);
             this.numUpDoMinutosGestion.TabIndex = 53;
             // 
             // numUpDoHorasGestion
             // 
-            this.numUpDoHorasGestion.Location = new System.Drawing.Point(120, 98);
+            this.numUpDoHorasGestion.Location = new System.Drawing.Point(160, 121);
+            this.numUpDoHorasGestion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numUpDoHorasGestion.Maximum = new decimal(new int[] {
             22,
             0,
@@ -737,7 +754,7 @@
             0,
             0});
             this.numUpDoHorasGestion.Name = "numUpDoHorasGestion";
-            this.numUpDoHorasGestion.Size = new System.Drawing.Size(44, 20);
+            this.numUpDoHorasGestion.Size = new System.Drawing.Size(59, 22);
             this.numUpDoHorasGestion.TabIndex = 52;
             this.numUpDoHorasGestion.Value = new decimal(new int[] {
             9,
@@ -747,9 +764,9 @@
             // 
             // GestionForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(688, 682);
+            this.ClientSize = new System.Drawing.Size(917, 839);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.numUpDoMinutosGestion);
             this.Controls.Add(this.numUpDoHorasGestion);
@@ -758,9 +775,7 @@
             this.Controls.Add(this.txtMaskTelefono);
             this.Controls.Add(this.txtMaskEmail);
             this.Controls.Add(this.txtMaskCuentaC);
-            this.Controls.Add(this.btnBuscarReserva);
-            this.Controls.Add(this.btnBuscarSocio);
-            this.Controls.Add(this.btnBuscarPista);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnModificarPista);
             this.Controls.Add(this.btnModificarReserva);
             this.Controls.Add(this.btnModificarSocio);
@@ -799,6 +814,7 @@
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.reservasBindingNavigator);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "GestionForm";
             this.Text = "GestionForm";
             this.Load += new System.EventHandler(this.GestionForm_Load);
@@ -869,9 +885,7 @@
         private System.Windows.Forms.Button btnModificarSocio;
         private System.Windows.Forms.Button btnModificarReserva;
         private System.Windows.Forms.Button btnModificarPista;
-        private System.Windows.Forms.Button btnBuscarPista;
-        private System.Windows.Forms.Button btnBuscarSocio;
-        private System.Windows.Forms.Button btnBuscarReserva;
+        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtIdPistaPista;
         private System.Windows.Forms.MaskedTextBox txtMaskCuentaC;
         private System.Windows.Forms.MaskedTextBox txtMaskEmail;
