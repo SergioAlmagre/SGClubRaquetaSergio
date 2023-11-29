@@ -15,6 +15,10 @@ namespace SGClubRaquetaSergio
         int sociosStatus = 0;
         int pistasStatus = 0;
         int reservasStatus = 0;
+        int idPista = 0;
+        int idSocio = 0;
+        int idReserva = 0;
+
 
         public GestionForm()
         {
@@ -175,14 +179,18 @@ namespace SGClubRaquetaSergio
                     reservaAModificar.pagado = txtPagado.Text;
                     reservaAModificar.cantidad = int.Parse(txtCantidad.Text);
 
-                    objDB.SaveChanges();
-                    MessageBox.Show("Reserva modificada correctamente", "Modificar reserva", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Guardar los cambios y obtener el número de entidades modificadas
+                    int cambiosGuardados = objDB.SaveChanges();
+
+                    if (cambiosGuardados > 0)
+                    {
+                        MessageBox.Show("Reserva modificada correctamente", "Modificar reserva", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se realizaron cambios en la reserva", "Modificar reserva", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-
-
-                this.Validate();
-                this.reservasBindingSource.EndEdit();
-                this.tableAdapterManager.UpdateAll(this.clubraquetaDataSet);
             }
         }
 
@@ -256,18 +264,37 @@ namespace SGClubRaquetaSergio
 
         private void btnBuscarPista_Click(object sender, EventArgs e)
         {
+            Busquedas formulario = new Busquedas(0); //FORMULARIO MODAL
 
-        }
-
-        private void btnBuscarSocio_Click(object sender, EventArgs e)
-        {
-
+            if (formulario.ShowDialog() == DialogResult.Cancel)
+            {
+                idPista = formulario.idPista;
+                txtPistaReserva.SelectedValue = idPista;
+            }
+            
         }
 
         private void btnBuscarReserva_Click(object sender, EventArgs e)
         {
+            Busquedas formulario = new Busquedas(1); //FORMULARIO MODAL
 
+            if (formulario.ShowDialog() == DialogResult.Cancel)
+            {
+
+            }
         }
+
+        private void btnBuscarSocio_Click(object sender, EventArgs e)
+        {
+            Busquedas formulario = new Busquedas(2); //FORMULARIO MODAL
+
+            if (formulario.ShowDialog() == DialogResult.Cancel)
+            {
+
+            }
+        }
+
+       
 
         private void txtPistaReserva_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -301,9 +328,6 @@ namespace SGClubRaquetaSergio
                         numUpDoHorasGestion.Value = objReserva.hora.Hours;
                         numUpDoMinutosGestion.Value = objReserva.hora.Minutes;
                     }
-               
-
-
                 }
             }
         }
@@ -328,5 +352,6 @@ namespace SGClubRaquetaSergio
 
 
         }
+
     }
 }

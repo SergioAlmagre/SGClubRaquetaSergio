@@ -512,8 +512,8 @@ WHERE        (DNI = @Param1)</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="reservas_fk_pst" msdata:parent="pistas" msdata:child="reservas" msdata:parentkey="idPista" msdata:childkey="pista" msprop:Generator_UserParentTable="pistas" msprop:Generator_UserChildTable="reservas" msprop:Generator_RelationVarName="relationreservas_fk_pst" msprop:Generator_ChildPropName="GetreservasRows" msprop:Generator_ParentPropName="pistasRow" msprop:Generator_UserRelationName="reservas_fk_pst" />
-      <msdata:Relationship name="reservas_fk_soc" msdata:parent="socios" msdata:child="reservas" msdata:parentkey="DNI" msdata:childkey="socio" msprop:Generator_UserParentTable="socios" msprop:Generator_UserChildTable="reservas" msprop:Generator_RelationVarName="relationreservas_fk_soc" msprop:Generator_ChildPropName="GetreservasRows" msprop:Generator_UserRelationName="reservas_fk_soc" msprop:Generator_ParentPropName="sociosRow" />
+      <msdata:Relationship name="reservas_fk_pst" msdata:parent="pistas" msdata:child="reservas" msdata:parentkey="idPista" msdata:childkey="pista" msprop:Generator_UserParentTable="pistas" msprop:Generator_UserChildTable="reservas" msprop:Generator_RelationVarName="relationreservas_fk_pst" msprop:Generator_ChildPropName="GetreservasRows" msprop:Generator_UserRelationName="reservas_fk_pst" msprop:Generator_ParentPropName="pistasRow" />
+      <msdata:Relationship name="reservas_fk_soc" msdata:parent="socios" msdata:child="reservas" msdata:parentkey="DNI" msdata:childkey="socio" msprop:Generator_UserParentTable="socios" msprop:Generator_UserChildTable="reservas" msprop:Generator_RelationVarName="relationreservas_fk_soc" msprop:Generator_ChildPropName="GetreservasRows" msprop:Generator_ParentPropName="sociosRow" msprop:Generator_UserRelationName="reservas_fk_soc" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
