@@ -19,7 +19,6 @@ namespace SGClubRaquetaSergio
         int idSocio = 0;
         int idReserva = 0;
 
-
         public GestionForm()
         {
             InitializeComponent();
@@ -28,10 +27,12 @@ namespace SGClubRaquetaSergio
         private void pistasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
 
+
         }
 
         private void sociosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
+
 
         }
 
@@ -54,7 +55,6 @@ namespace SGClubRaquetaSergio
             this.Validate();
             this.reservasBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.clubraquetaDataSet);
-
         }
 
         private void reservasBindingNavigatorSaveItem_Click_2(object sender, EventArgs e)
@@ -62,7 +62,6 @@ namespace SGClubRaquetaSergio
             this.Validate();
             this.reservasBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.clubraquetaDataSet);
-
         }
 
         private void GestionForm_Load(object sender, EventArgs e)
@@ -262,35 +261,28 @@ namespace SGClubRaquetaSergio
             }
         }
 
-        private void btnBuscarPista_Click(object sender, EventArgs e)
+
+        private void btnBuscarSocio_Click(object sender, EventArgs e)
         {
-            Busquedas formulario = new Busquedas(0); //FORMULARIO MODAL
+            Busquedas formulario = new Busquedas(); //FORMULARIO MODAL
 
             if (formulario.ShowDialog() == DialogResult.Cancel)
             {
                 idPista = formulario.idPista;
-                txtPistaReserva.SelectedValue = idPista;
-            }
-            
-        }
-
-        private void btnBuscarReserva_Click(object sender, EventArgs e)
-        {
-            Busquedas formulario = new Busquedas(1); //FORMULARIO MODAL
-
-            if (formulario.ShowDialog() == DialogResult.Cancel)
-            {
-
-            }
-        }
-
-        private void btnBuscarSocio_Click(object sender, EventArgs e)
-        {
-            Busquedas formulario = new Busquedas(2); //FORMULARIO MODAL
-
-            if (formulario.ShowDialog() == DialogResult.Cancel)
-            {
-
+                idSocio = formulario.idSocio;
+                idReserva = formulario.idReserva;
+                if (idSocio != 0)
+                {
+                    txtSocioReserva.SelectedValue = idSocio;
+                }
+                if (idPista != 0)
+                {
+                    txtPistaReserva.SelectedValue = idPista;
+                }
+                if (idReserva != 0)
+                { 
+                    txtPistaReserva.SelectedValue = idReserva;
+                }
             }
         }
 
