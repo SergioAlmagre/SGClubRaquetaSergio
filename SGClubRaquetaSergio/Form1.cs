@@ -127,5 +127,33 @@ namespace SGClubRaquetaSergio
                 formulario.Show();
             }
         }
+
+        private void bORRADOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.MdiChildren.Length > 0)
+            {
+                if (this.MdiChildren[0].Name != "BorradoForm")
+                {
+                    DialogResult rs = MessageBox.Show("¿Seguro que desea salir?, Puedes perder los datos si no has guardado", "Atención!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (rs == DialogResult.Yes)
+                    {
+                        this.MdiChildren[0].Close();
+                        BorradoForm formulario = new BorradoForm(null,null);
+                        formulario.MdiParent = this;
+                        formulario.Dock = DockStyle.Fill;
+                        formulario.Show();
+                    }
+                }
+            }
+            else
+            {
+                BorradoForm formulario = new BorradoForm(null,null);
+                formulario.MdiParent = this;
+                formulario.Dock = DockStyle.Fill;
+                formulario.Show();
+            }
+        }
+
+
     }
 }

@@ -384,6 +384,26 @@ WHERE        (DNI = @Param1)</CommandText>
               </DbSource>
             </Sources>
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="comboItemReservasBorradoDataSetTableAdapter" GeneratorDataComponentClassName="comboItemReservasBorradoDataSetTableAdapter" Name="comboItemReservasBorradoDataSet" UserDataComponentName="comboItemReservasBorradoDataSetTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dsDB (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillFechaNombrePistaIdReserva" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="FillFechaNombrePistaIdReserva" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="FillFechaNombrePistaIdReserva">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        reservas.fecha, pistas.nombre, reservas.idReserva
+FROM            pistas INNER JOIN
+                         reservas ON pistas.idPista = reservas.pista</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="fecha" DataSetColumn="fecha" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="idReserva" DataSetColumn="idReserva" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -495,6 +515,21 @@ WHERE        (DNI = @Param1)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="comboItemReservasBorradoDataSet" msprop:Generator_RowEvHandlerName="comboItemReservasBorradoDataSetRowChangeEventHandler" msprop:Generator_RowDeletedName="comboItemReservasBorradoDataSetRowDeleted" msprop:Generator_RowDeletingName="comboItemReservasBorradoDataSetRowDeleting" msprop:Generator_RowEvArgName="comboItemReservasBorradoDataSetRowChangeEvent" msprop:Generator_TablePropName="comboItemReservasBorradoDataSet" msprop:Generator_RowChangedName="comboItemReservasBorradoDataSetRowChanged" msprop:Generator_RowChangingName="comboItemReservasBorradoDataSetRowChanging" msprop:Generator_TableClassName="comboItemReservasBorradoDataSetDataTable" msprop:Generator_RowClassName="comboItemReservasBorradoDataSetRow" msprop:Generator_TableVarName="tablecomboItemReservasBorradoDataSet" msprop:Generator_UserTableName="comboItemReservasBorradoDataSet">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" />
+              <xs:element name="nombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idReserva" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="idReserva" msprop:Generator_ColumnPropNameInTable="idReservaColumn" msprop:Generator_ColumnVarNameInTable="columnidReserva" msprop:Generator_UserColumnName="idReserva" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -509,11 +544,15 @@ WHERE        (DNI = @Param1)</CommandText>
       <xs:selector xpath=".//mstns:socios" />
       <xs:field xpath="mstns:DNI" />
     </xs:unique>
+    <xs:unique name="comboItemReservasBorradoDataSet_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:comboItemReservasBorradoDataSet" />
+      <xs:field xpath="mstns:idReserva" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="reservas_fk_pst" msdata:parent="pistas" msdata:child="reservas" msdata:parentkey="idPista" msdata:childkey="pista" msprop:Generator_UserParentTable="pistas" msprop:Generator_UserChildTable="reservas" msprop:Generator_RelationVarName="relationreservas_fk_pst" msprop:Generator_ChildPropName="GetreservasRows" msprop:Generator_UserRelationName="reservas_fk_pst" msprop:Generator_ParentPropName="pistasRow" />
-      <msdata:Relationship name="reservas_fk_soc" msdata:parent="socios" msdata:child="reservas" msdata:parentkey="DNI" msdata:childkey="socio" msprop:Generator_UserParentTable="socios" msprop:Generator_UserChildTable="reservas" msprop:Generator_RelationVarName="relationreservas_fk_soc" msprop:Generator_ChildPropName="GetreservasRows" msprop:Generator_ParentPropName="sociosRow" msprop:Generator_UserRelationName="reservas_fk_soc" />
+      <msdata:Relationship name="reservas_fk_pst" msdata:parent="pistas" msdata:child="reservas" msdata:parentkey="idPista" msdata:childkey="pista" msprop:Generator_UserParentTable="pistas" msprop:Generator_UserChildTable="reservas" msprop:Generator_RelationVarName="relationreservas_fk_pst" msprop:Generator_ChildPropName="GetreservasRows" msprop:Generator_ParentPropName="pistasRow" msprop:Generator_UserRelationName="reservas_fk_pst" />
+      <msdata:Relationship name="reservas_fk_soc" msdata:parent="socios" msdata:child="reservas" msdata:parentkey="DNI" msdata:childkey="socio" msprop:Generator_UserParentTable="socios" msprop:Generator_UserChildTable="reservas" msprop:Generator_RelationVarName="relationreservas_fk_soc" msprop:Generator_ChildPropName="GetreservasRows" msprop:Generator_UserRelationName="reservas_fk_soc" msprop:Generator_ParentPropName="sociosRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

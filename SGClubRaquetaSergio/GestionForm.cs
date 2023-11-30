@@ -345,5 +345,19 @@ namespace SGClubRaquetaSergio
 
         }
 
+        private void btnBorrarReserva_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBorrarPista_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBorrarSocio_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
