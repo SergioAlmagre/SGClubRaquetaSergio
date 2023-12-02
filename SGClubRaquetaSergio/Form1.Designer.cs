@@ -37,6 +37,7 @@
             this.gESTIONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bORRADOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sALIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pRECIOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +50,7 @@
             this.iNFORMESToolStripMenuItem,
             this.gESTIONToolStripMenuItem,
             this.bORRADOToolStripMenuItem,
+            this.pRECIOSToolStripMenuItem,
             this.sALIRToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -116,6 +118,13 @@
             this.sALIRToolStripMenuItem.Text = "SALIR";
             this.sALIRToolStripMenuItem.Click += new System.EventHandler(this.sALIRToolStripMenuItem_Click);
             // 
+            // pRECIOSToolStripMenuItem
+            // 
+            this.pRECIOSToolStripMenuItem.Name = "pRECIOSToolStripMenuItem";
+            this.pRECIOSToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.pRECIOSToolStripMenuItem.Text = "PRECIOS";
+            this.pRECIOSToolStripMenuItem.Click += new System.EventHandler(this.pRECIOSToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -126,7 +135,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -148,6 +157,7 @@
         private System.Windows.Forms.ToolStripMenuItem sALIRToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gESTIONToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bORRADOToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pRECIOSToolStripMenuItem;
     }
 }
 
