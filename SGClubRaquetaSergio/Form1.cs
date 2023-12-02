@@ -154,6 +154,30 @@ namespace SGClubRaquetaSergio
             }
         }
 
-
+        private void pRECIOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.MdiChildren.Length > 0)
+            {
+                if (this.MdiChildren[0].Name != "PreciosForm")
+                {
+                    DialogResult rs = MessageBox.Show("¿Seguro que desea salir?, Puedes perder los datos si no has guardado", "Atención!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (rs == DialogResult.Yes)
+                    {
+                        this.MdiChildren[0].Close();
+                        PreciosForm formulario = PreciosForm.getInstance(); //CLASE SINGLETON - Este caso no tiene mucho sentido pero es un ejemplo
+                        formulario.MdiParent = this;
+                        formulario.Dock = DockStyle.Fill;
+                        formulario.Show();
+                    }
+                }
+            }
+            else
+            {
+                PreciosForm formulario = PreciosForm.getInstance();
+                formulario.MdiParent = this;
+                formulario.Dock = DockStyle.Fill;
+                formulario.Show();
+            }
+        }
     }
 }
