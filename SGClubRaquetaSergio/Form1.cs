@@ -164,7 +164,7 @@ namespace SGClubRaquetaSergio
                     if (rs == DialogResult.Yes)
                     {
                         this.MdiChildren[0].Close();
-                        PreciosForm formulario = new PreciosForm();
+                        PreciosForm formulario = PreciosForm.getInstance(); //CLASE SINGLETON - Este caso no tiene mucho sentido pero es un ejemplo
                         formulario.MdiParent = this;
                         formulario.Dock = DockStyle.Fill;
                         formulario.Show();
@@ -173,7 +173,7 @@ namespace SGClubRaquetaSergio
             }
             else
             {
-                PreciosForm formulario = new PreciosForm();
+                PreciosForm formulario = PreciosForm.getInstance();
                 formulario.MdiParent = this;
                 formulario.Dock = DockStyle.Fill;
                 formulario.Show();
