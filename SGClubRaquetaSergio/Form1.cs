@@ -19,7 +19,11 @@ namespace SGClubRaquetaSergio
 
         private void sALIRToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+           DialogResult result = MessageBox.Show("¿Seguro que desea salir?", "Atención!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void pistasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -89,7 +93,6 @@ namespace SGClubRaquetaSergio
         {
 
             SociosForm formulario = new SociosForm(); //FORMULARIO MODAL
-
             if (formulario.ShowDialog() == DialogResult.Cancel)
             {
                         
