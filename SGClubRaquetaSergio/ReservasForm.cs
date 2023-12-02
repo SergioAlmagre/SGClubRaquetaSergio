@@ -188,7 +188,6 @@ namespace SGClubRaquetaSergio
         private Boolean socioTieneReserva()
         {
             Boolean tieneReserva = false;
-            clubraquetaDataSet dsDB = new clubraquetaDataSet();
             reservasTableAdapter reservasTableAdapter = new reservasTableAdapter();
 
             var pistasSocioReservadas = reservasTableAdapter.CountPistasByDniSocio(dniSocio);
@@ -199,14 +198,12 @@ namespace SGClubRaquetaSergio
             }
 
             return tieneReserva;
-
         }
 
 
         private Boolean socioEsMoroso()
         {
             Boolean esMoroso = false;
-            clubraquetaDataSet dsDB = new clubraquetaDataSet();
             reservasTableAdapter reservasTableAdapter = new reservasTableAdapter();
 
             var cantidadSinPagar = (int)reservasTableAdapter.CountSinPagarByDni(dniSocio);

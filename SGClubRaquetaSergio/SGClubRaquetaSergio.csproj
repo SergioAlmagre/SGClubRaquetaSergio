@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BorradoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BorradoForm.Designer.cs">
+      <DependentUpon>BorradoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Busquedas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,7 +72,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>clubraquetaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ComboItemReservaBorrado.cs" />
     <Compile Include="ComboItemRevervas.cs" />
+    <Compile Include="ComboItemSocio.cs" />
+    <Compile Include="ComboItemPistas.cs" />
     <Compile Include="Extensiones.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -130,6 +139,9 @@
     <Compile Include="SociosForm.Designer.cs">
       <DependentUpon>SociosForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BorradoForm.resx">
+      <DependentUpon>BorradoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Busquedas.resx">
       <DependentUpon>Busquedas.cs</DependentUpon>
     </EmbeddedResource>

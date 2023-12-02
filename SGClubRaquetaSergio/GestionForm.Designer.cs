@@ -100,6 +100,9 @@
             this.label12 = new System.Windows.Forms.Label();
             this.numUpDoMinutosGestion = new System.Windows.Forms.NumericUpDown();
             this.numUpDoHorasGestion = new System.Windows.Forms.NumericUpDown();
+            this.btnBorrarReserva = new System.Windows.Forms.Button();
+            this.btnBorrarSocio = new System.Windows.Forms.Button();
+            this.btnBorrarPista = new System.Windows.Forms.Button();
             fechaLabel = new System.Windows.Forms.Label();
             horaLabel = new System.Windows.Forms.Label();
             pistaLabel = new System.Windows.Forms.Label();
@@ -335,7 +338,7 @@
             // 
             this.txtDataPickerFecha.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.reservasBindingSource, "fecha", true));
             this.txtDataPickerFecha.Location = new System.Drawing.Point(159, 89);
-            this.txtDataPickerFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDataPickerFecha.Margin = new System.Windows.Forms.Padding(4);
             this.txtDataPickerFecha.Name = "txtDataPickerFecha";
             this.txtDataPickerFecha.Size = new System.Drawing.Size(280, 22);
             this.txtDataPickerFecha.TabIndex = 4;
@@ -347,7 +350,7 @@
             this.txtPistaReserva.DisplayMember = "nombre";
             this.txtPistaReserva.FormattingEnabled = true;
             this.txtPistaReserva.Location = new System.Drawing.Point(159, 153);
-            this.txtPistaReserva.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPistaReserva.Margin = new System.Windows.Forms.Padding(4);
             this.txtPistaReserva.Name = "txtPistaReserva";
             this.txtPistaReserva.Size = new System.Drawing.Size(280, 24);
             this.txtPistaReserva.TabIndex = 8;
@@ -371,7 +374,7 @@
             this.txtSocioReserva.DisplayMember = "apellidos";
             this.txtSocioReserva.FormattingEnabled = true;
             this.txtSocioReserva.Location = new System.Drawing.Point(159, 186);
-            this.txtSocioReserva.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSocioReserva.Margin = new System.Windows.Forms.Padding(4);
             this.txtSocioReserva.Name = "txtSocioReserva";
             this.txtSocioReserva.Size = new System.Drawing.Size(280, 24);
             this.txtSocioReserva.TabIndex = 10;
@@ -392,7 +395,7 @@
             // 
             this.txtPagado.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservasBindingSource, "pagado", true));
             this.txtPagado.Location = new System.Drawing.Point(159, 219);
-            this.txtPagado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPagado.Margin = new System.Windows.Forms.Padding(4);
             this.txtPagado.Name = "txtPagado";
             this.txtPagado.Size = new System.Drawing.Size(280, 22);
             this.txtPagado.TabIndex = 12;
@@ -401,7 +404,7 @@
             // 
             this.txtCantidad.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservasBindingSource, "cantidad", true));
             this.txtCantidad.Location = new System.Drawing.Point(159, 251);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(280, 22);
             this.txtCantidad.TabIndex = 14;
@@ -479,7 +482,7 @@
             // txtDNI
             // 
             this.txtDNI.Location = new System.Drawing.Point(589, 53);
-            this.txtDNI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDNI.Margin = new System.Windows.Forms.Padding(4);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(280, 22);
             this.txtDNI.TabIndex = 22;
@@ -487,7 +490,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(589, 89);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(280, 22);
             this.txtNombre.TabIndex = 24;
@@ -495,7 +498,7 @@
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(589, 122);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(280, 22);
             this.txtApellido.TabIndex = 25;
@@ -503,7 +506,7 @@
             // txtDomicilio
             // 
             this.txtDomicilio.Location = new System.Drawing.Point(589, 155);
-            this.txtDomicilio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDomicilio.Margin = new System.Windows.Forms.Padding(4);
             this.txtDomicilio.Name = "txtDomicilio";
             this.txtDomicilio.Size = new System.Drawing.Size(280, 22);
             this.txtDomicilio.TabIndex = 26;
@@ -551,7 +554,7 @@
             // txtPrecioHora
             // 
             this.txtPrecioHora.Location = new System.Drawing.Point(163, 458);
-            this.txtPrecioHora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPrecioHora.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecioHora.Name = "txtPrecioHora";
             this.txtPrecioHora.Size = new System.Drawing.Size(280, 22);
             this.txtPrecioHora.TabIndex = 38;
@@ -559,7 +562,7 @@
             // txtUbicacion
             // 
             this.txtUbicacion.Location = new System.Drawing.Point(163, 426);
-            this.txtUbicacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUbicacion.Margin = new System.Windows.Forms.Padding(4);
             this.txtUbicacion.Name = "txtUbicacion";
             this.txtUbicacion.Size = new System.Drawing.Size(280, 22);
             this.txtUbicacion.TabIndex = 37;
@@ -567,7 +570,7 @@
             // txtNombrePista
             // 
             this.txtNombrePista.Location = new System.Drawing.Point(163, 394);
-            this.txtNombrePista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombrePista.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombrePista.Name = "txtNombrePista";
             this.txtNombrePista.Size = new System.Drawing.Size(280, 22);
             this.txtNombrePista.TabIndex = 36;
@@ -576,7 +579,7 @@
             // 
             this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.pistasBindingSource1, "foto", true));
             this.fotoPictureBox.Location = new System.Drawing.Point(512, 361);
-            this.fotoPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fotoPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.fotoPictureBox.Name = "fotoPictureBox";
             this.fotoPictureBox.Size = new System.Drawing.Size(359, 206);
             this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -586,7 +589,7 @@
             // btnModificarFoto
             // 
             this.btnModificarFoto.Location = new System.Drawing.Point(512, 586);
-            this.btnModificarFoto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificarFoto.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificarFoto.Name = "btnModificarFoto";
             this.btnModificarFoto.Size = new System.Drawing.Size(359, 28);
             this.btnModificarFoto.TabIndex = 40;
@@ -600,7 +603,7 @@
             this.dataGridGestion.AllowUserToDeleteRows = false;
             this.dataGridGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridGestion.Location = new System.Drawing.Point(51, 635);
-            this.dataGridGestion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridGestion.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridGestion.Name = "dataGridGestion";
             this.dataGridGestion.ReadOnly = true;
             this.dataGridGestion.RowHeadersWidth = 51;
@@ -611,9 +614,9 @@
             // btnModificarSocio
             // 
             this.btnModificarSocio.Location = new System.Drawing.Point(589, 294);
-            this.btnModificarSocio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificarSocio.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificarSocio.Name = "btnModificarSocio";
-            this.btnModificarSocio.Size = new System.Drawing.Size(281, 28);
+            this.btnModificarSocio.Size = new System.Drawing.Size(122, 28);
             this.btnModificarSocio.TabIndex = 42;
             this.btnModificarSocio.Text = "MODIFICAR";
             this.btnModificarSocio.UseVisualStyleBackColor = true;
@@ -622,9 +625,9 @@
             // btnModificarReserva
             // 
             this.btnModificarReserva.Location = new System.Drawing.Point(159, 294);
-            this.btnModificarReserva.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificarReserva.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificarReserva.Name = "btnModificarReserva";
-            this.btnModificarReserva.Size = new System.Drawing.Size(281, 28);
+            this.btnModificarReserva.Size = new System.Drawing.Size(132, 28);
             this.btnModificarReserva.TabIndex = 43;
             this.btnModificarReserva.Tag = "";
             this.btnModificarReserva.Text = "MODIFICAR";
@@ -634,9 +637,9 @@
             // btnModificarPista
             // 
             this.btnModificarPista.Location = new System.Drawing.Point(163, 503);
-            this.btnModificarPista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificarPista.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificarPista.Name = "btnModificarPista";
-            this.btnModificarPista.Size = new System.Drawing.Size(281, 28);
+            this.btnModificarPista.Size = new System.Drawing.Size(128, 28);
             this.btnModificarPista.TabIndex = 44;
             this.btnModificarPista.Text = "MODIFICAR";
             this.btnModificarPista.UseVisualStyleBackColor = true;
@@ -645,7 +648,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Location = new System.Drawing.Point(163, 553);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(281, 61);
             this.btnBuscar.TabIndex = 46;
@@ -656,7 +659,7 @@
             // txtIdPistaPista
             // 
             this.txtIdPistaPista.Location = new System.Drawing.Point(163, 361);
-            this.txtIdPistaPista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdPistaPista.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdPistaPista.Name = "txtIdPistaPista";
             this.txtIdPistaPista.Size = new System.Drawing.Size(280, 22);
             this.txtIdPistaPista.TabIndex = 35;
@@ -729,7 +732,7 @@
             // numUpDoMinutosGestion
             // 
             this.numUpDoMinutosGestion.Location = new System.Drawing.Point(247, 121);
-            this.numUpDoMinutosGestion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numUpDoMinutosGestion.Margin = new System.Windows.Forms.Padding(4);
             this.numUpDoMinutosGestion.Maximum = new decimal(new int[] {
             30,
             0,
@@ -742,7 +745,7 @@
             // numUpDoHorasGestion
             // 
             this.numUpDoHorasGestion.Location = new System.Drawing.Point(160, 121);
-            this.numUpDoHorasGestion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numUpDoHorasGestion.Margin = new System.Windows.Forms.Padding(4);
             this.numUpDoHorasGestion.Maximum = new decimal(new int[] {
             22,
             0,
@@ -762,11 +765,50 @@
             0,
             0});
             // 
+            // btnBorrarReserva
+            // 
+            this.btnBorrarReserva.Location = new System.Drawing.Point(307, 294);
+            this.btnBorrarReserva.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBorrarReserva.Name = "btnBorrarReserva";
+            this.btnBorrarReserva.Size = new System.Drawing.Size(132, 28);
+            this.btnBorrarReserva.TabIndex = 55;
+            this.btnBorrarReserva.Tag = "";
+            this.btnBorrarReserva.Text = "BORRAR";
+            this.btnBorrarReserva.UseVisualStyleBackColor = true;
+            this.btnBorrarReserva.Click += new System.EventHandler(this.btnBorrarReserva_Click);
+            // 
+            // btnBorrarSocio
+            // 
+            this.btnBorrarSocio.Location = new System.Drawing.Point(737, 294);
+            this.btnBorrarSocio.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBorrarSocio.Name = "btnBorrarSocio";
+            this.btnBorrarSocio.Size = new System.Drawing.Size(132, 28);
+            this.btnBorrarSocio.TabIndex = 56;
+            this.btnBorrarSocio.Tag = "";
+            this.btnBorrarSocio.Text = "BORRAR";
+            this.btnBorrarSocio.UseVisualStyleBackColor = true;
+            this.btnBorrarSocio.Click += new System.EventHandler(this.btnBorrarSocio_Click);
+            // 
+            // btnBorrarPista
+            // 
+            this.btnBorrarPista.Location = new System.Drawing.Point(312, 503);
+            this.btnBorrarPista.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBorrarPista.Name = "btnBorrarPista";
+            this.btnBorrarPista.Size = new System.Drawing.Size(132, 28);
+            this.btnBorrarPista.TabIndex = 57;
+            this.btnBorrarPista.Tag = "";
+            this.btnBorrarPista.Text = "BORRAR";
+            this.btnBorrarPista.UseVisualStyleBackColor = true;
+            this.btnBorrarPista.Click += new System.EventHandler(this.btnBorrarPista_Click);
+            // 
             // GestionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(917, 839);
+            this.Controls.Add(this.btnBorrarPista);
+            this.Controls.Add(this.btnBorrarSocio);
+            this.Controls.Add(this.btnBorrarReserva);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.numUpDoMinutosGestion);
             this.Controls.Add(this.numUpDoHorasGestion);
@@ -814,7 +856,7 @@
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.reservasBindingNavigator);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GestionForm";
             this.Text = "GestionForm";
             this.Load += new System.EventHandler(this.GestionForm_Load);
@@ -903,5 +945,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.NumericUpDown numUpDoMinutosGestion;
         private System.Windows.Forms.NumericUpDown numUpDoHorasGestion;
+        private System.Windows.Forms.Button btnBorrarReserva;
+        private System.Windows.Forms.Button btnBorrarSocio;
+        private System.Windows.Forms.Button btnBorrarPista;
     }
 }
