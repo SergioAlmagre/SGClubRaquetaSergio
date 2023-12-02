@@ -15,9 +15,9 @@ namespace SGClubRaquetaSergio
         int sociosStatus = 0;
         int pistasStatus = 0;
         int reservasStatus = 0;
-        int idPista = 0;
-        int idSocio = 0;
-        int idReserva = 0;
+        string idPista = "";
+        string idSocio = "";
+        string idReserva = "";
 
         public GestionForm()
         {
@@ -248,7 +248,7 @@ namespace SGClubRaquetaSergio
 
                 using (clubraquetaEntities objDB = new clubraquetaEntities())
                 {
-                    int idPista = int.Parse(txtIdPistaPista.Text);
+                    idPista = txtIdPistaPista.Text;
                     pistas pistaAModificar = objDB.pistas.Find(idPista);
 
                     pistaAModificar.nombre = txtNombrePista.Text;
@@ -268,18 +268,18 @@ namespace SGClubRaquetaSergio
 
             if (formulario.ShowDialog() == DialogResult.Cancel)
             {
-                idPista = formulario.idPista;
-                idSocio = formulario.idSocio;
-                idReserva = formulario.idReserva;
-                if (idSocio != 0)
+                idPista = formulario.idPista.ToString();
+                idSocio = formulario.idSocio.ToString();
+                idReserva = formulario.idReserva.ToString();
+                if (idSocio != "0")
                 {
                     txtSocioReserva.SelectedValue = idSocio;
                 }
-                if (idPista != 0)
+                if (idPista != "0")
                 {
                     txtPistaReserva.SelectedValue = idPista;
                 }
-                if (idReserva != 0)
+                if (idReserva != "0")
                 { 
                     txtPistaReserva.SelectedValue = idReserva;
                 }
@@ -347,17 +347,35 @@ namespace SGClubRaquetaSergio
 
         private void btnBorrarReserva_Click(object sender, EventArgs e)
         {
+            idReserva = txtIdReserva.Text;
+            BorradoForm formulario = new BorradoForm(idReserva,0); //FORMULARIO MODAL
 
+            if (formulario.ShowDialog() == DialogResult.Cancel)
+            {
+
+            }
         }
 
         private void btnBorrarPista_Click(object sender, EventArgs e)
         {
+            idPista = txtIdPistaPista.Text;
+            BorradoForm formulario = new BorradoForm(idPista, 1); //FORMULARIO MODAL
 
+            if (formulario.ShowDialog() == DialogResult.Cancel)
+            {
+
+            }
         }
 
         private void btnBorrarSocio_Click(object sender, EventArgs e)
         {
+            idSocio = txtDNI.Text;
+            BorradoForm formulario = new BorradoForm(idSocio, 2); //FORMULARIO MODAL
 
+            if (formulario.ShowDialog() == DialogResult.Cancel)
+            {
+
+            }
         }
     }
 }

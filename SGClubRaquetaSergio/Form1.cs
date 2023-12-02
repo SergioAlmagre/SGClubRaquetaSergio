@@ -138,7 +138,7 @@ namespace SGClubRaquetaSergio
                     if (rs == DialogResult.Yes)
                     {
                         this.MdiChildren[0].Close();
-                        BorradoForm formulario = new BorradoForm(null,null);
+                        BorradoForm formulario = new BorradoForm(null,-1);
                         formulario.MdiParent = this;
                         formulario.Dock = DockStyle.Fill;
                         formulario.Show();
@@ -147,7 +147,7 @@ namespace SGClubRaquetaSergio
             }
             else
             {
-                BorradoForm formulario = new BorradoForm(null,null);
+                BorradoForm formulario = new BorradoForm(null,-1);
                 formulario.MdiParent = this;
                 formulario.Dock = DockStyle.Fill;
                 formulario.Show();
