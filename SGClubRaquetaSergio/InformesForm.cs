@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -219,6 +220,31 @@ namespace SGClubRaquetaSergio
         private void dataGridViewInformes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnGenerarXml_Click(object sender, EventArgs e)
+        {
+            if(dataGridViewInformes.Rows.Count > 0)
+            {
+                string ruta = "";
+                if (sfdRuta.ShowDialog() == DialogResult.OK)
+                {
+                    ruta = sfdRuta.FileName;
+                }
+
+                //METER EL CONTENIDO DEL DATAGRIDVIEW A UN FICHERO XML
+                var dataset = dataGridViewInformes.ObtenerDataSet();
+                StreamWriter stw = new StreamWriter(ruta + ".xml");
+                dataset.WriteXml(stw);
+                MessageBox.Show("Archivo guardado correctamente");
+            }
+            else
+            {
+                MessageBox.Show("No hay datos para generar el XML");
+                return;
+
+            }
+            
         }
     }
 }

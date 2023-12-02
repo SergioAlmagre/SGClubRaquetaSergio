@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -377,5 +378,126 @@ namespace SGClubRaquetaSergio
 
             }
         }
+
+        private void btnGenerarInforme_Click(object sender, EventArgs e)
+        {
+            using (clubraquetaEntities objDB = new clubraquetaEntities())
+            {
+                // Obtén los valores de los controles de tu formulario
+                string idPista = txtIdPistaPista.Text;
+                string idSocio = txtDNI.Text;
+                string idReserva = txtIdReserva.Text;
+
+                // Convierte las cadenas a enteros si es necesario
+                int idPistaInt, idReservaInt;
+                if (!int.TryParse(idPista, out idPistaInt) || !int.TryParse(idReserva, out idReservaInt))
+                {
+                    MessageBox.Show("Error al convertir los valores a enteros.");
+                    return;
+                }
+
+                var pistaSeleccionada = objDB.pistas.Find(idPistaInt);
+                var socioSeleccionado = objDB.socios.Find(idSocio);
+                var reservaSeleccionada = objDB.reservas.Find(idReservaInt);
+
+                // Verifica si los objetos fueron encontrados
+                if (pistaSeleccionada == null || socioSeleccionado == null || reservaSeleccionada == null)
+                {
+                    MessageBox.Show("Uno o más elementos no fueron encontrados en la base de datos.");
+                    return;
+                }
+
+                // Pide al usuario que seleccione una ruta de archivo
+                string ruta = "";
+                using (SaveFileDialog sfdRuta = new SaveFileDialog())
+                {
+                    if (sfdRuta.ShowDialog() == DialogResult.OK)
+                    {
+                        ruta = sfdRuta.FileName;
+                    }
+                    else
+                    {
+                        return; // El usuario canceló la operación
+                    }
+                }
+
+                string dataStr = montarCadena(socioSeleccionado, pistaSeleccionada, reservaSeleccionada);
+
+                StreamWriter stw = new StreamWriter(ruta + ".txt");
+                stw.WriteLine(dataStr);
+                stw.Close();
+                
+                MessageBox.Show("Archivo guardado correctamente");
+            }
+
+        }
+
+        private void btnGenerarInformeAuto_Click(object sender, EventArgs e)
+        {
+            using (clubraquetaEntities objDB = new clubraquetaEntities())
+            {
+                // Obtén los valores de los controles de tu formulario
+                string idPista = txtIdPistaPista.Text;
+                string idSocio = txtDNI.Text;
+                string idReserva = txtIdReserva.Text;
+
+                // Convierte las cadenas a enteros si es necesario
+                int idPistaInt, idReservaInt;
+                if (!int.TryParse(idPista, out idPistaInt) || !int.TryParse(idReserva, out idReservaInt))
+                {
+                    MessageBox.Show("Error al convertir los valores a enteros.");
+                    return;
+                }
+
+                var pistaSeleccionada = objDB.pistas.Find(idPistaInt);
+                var socioSeleccionado = objDB.socios.Find(idSocio);
+                var reservaSeleccionada = objDB.reservas.Find(idReservaInt);
+
+                // Verifica si los objetos fueron encontrados
+                if (pistaSeleccionada == null || socioSeleccionado == null || reservaSeleccionada == null)
+                {
+                    MessageBox.Show("Uno o más elementos no fueron encontrados en la base de datos.");
+                    return;
+                }
+
+                // Formatea la fecha actual como parte del nombre del archivo
+                string fechaActual = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+
+                // Combina la fecha formateada con el nombre del archivo
+                string nombreArchivo = $"Archivo_{fechaActual}.txt";
+
+                // Obtiene la ruta completa para guardar el archivo
+                string ruta = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), nombreArchivo);
+
+                string dataStr = montarCadena(socioSeleccionado, pistaSeleccionada, reservaSeleccionada);
+
+                StreamWriter stw = new StreamWriter(ruta);
+                stw.WriteLine(dataStr);
+                stw.Close();
+
+                MessageBox.Show($"Archivo guardado correctamente en: {ruta}");
+            }
+
+
+        }
+
+
+        private string montarCadena(socios socio, pistas pista, reservas reserva)
+        {
+            string cad = "";
+            string e = " ";
+            string s = "\n";
+
+            cad = socio.nombre + e + socio.apellidos + socio.DNI + s;
+            cad += socio.domicilio + e + socio.cuentaCorriente + s;
+            cad += "_______________________________________________________" + s;
+            cad += pista.nombre + e + pista.ubicacion + e + pista.precioHora + s;
+            cad += reserva.fecha + e + reserva.hora + e + reserva.pagado + e + reserva.cantidad + s;
+            cad += "_______________________________________________________" + s;
+
+            return cad;
+        }
+
+       
     }
 }

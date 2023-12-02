@@ -38,6 +38,8 @@
             this.btn7 = new System.Windows.Forms.Button();
             this.btn8 = new System.Windows.Forms.Button();
             this.btn9 = new System.Windows.Forms.Button();
+            this.btnGenerarXml = new System.Windows.Forms.Button();
+            this.sfdRuta = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInformes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -146,17 +148,29 @@
             this.btn9.Location = new System.Drawing.Point(19, 569);
             this.btn9.Margin = new System.Windows.Forms.Padding(2);
             this.btn9.Name = "btn9";
-            this.btn9.Size = new System.Drawing.Size(652, 32);
+            this.btn9.Size = new System.Drawing.Size(308, 32);
             this.btn9.TabIndex = 9;
             this.btn9.Text = "LIMPIAR";
             this.btn9.UseVisualStyleBackColor = true;
             this.btn9.Click += new System.EventHandler(this.btn9_Click);
+            // 
+            // btnGenerarXml
+            // 
+            this.btnGenerarXml.Location = new System.Drawing.Point(362, 569);
+            this.btnGenerarXml.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGenerarXml.Name = "btnGenerarXml";
+            this.btnGenerarXml.Size = new System.Drawing.Size(308, 32);
+            this.btnGenerarXml.TabIndex = 10;
+            this.btnGenerarXml.Text = "GENERAR DOCUMENTO XML";
+            this.btnGenerarXml.UseVisualStyleBackColor = true;
+            this.btnGenerarXml.Click += new System.EventHandler(this.btnGenerarXml_Click);
             // 
             // InformesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(694, 611);
+            this.Controls.Add(this.btnGenerarXml);
             this.Controls.Add(this.btn9);
             this.Controls.Add(this.btn8);
             this.Controls.Add(this.btn7);
@@ -188,5 +202,7 @@
         private System.Windows.Forms.Button btn7;
         private System.Windows.Forms.Button btn8;
         private System.Windows.Forms.Button btn9;
+        private System.Windows.Forms.Button btnGenerarXml;
+        private System.Windows.Forms.SaveFileDialog sfdRuta;
     }
 }

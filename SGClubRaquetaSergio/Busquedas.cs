@@ -60,6 +60,7 @@ namespace SGClubRaquetaSergio
             //lista.Add("Como estas");
             //lista.Add("Adios");
             //MessageBox.Show(lista.CantidadElementos());
+
             string ruta = "";
             if (sfdRuta.ShowDialog() == DialogResult.OK)
             {
